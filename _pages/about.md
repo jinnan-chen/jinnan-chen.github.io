@@ -8,10 +8,5 @@ redirect_from:
   - /about.html
 ---
 
-I'm a PhD student at NUS School of computing, under Prof Gim hee Lee (https://www.comp.nus.edu.sg/~leegh/), working on 3D computer vision. 
-B.S. in Wuhan University, 2019
-M.S. in Nanyang Technology University, 2021
-Ph.D in National University of Singapore, Now
-**I am looking for research internship of summer 2023. Feel free to email me for potential opportunities.**
-
+I'm a PhD student at NUS School of computing, under Prof Gim hee Lee (https://www.comp.nus.edu.sg/~leegh/), working on 3D computer vision. Before that, I received my B.E. degree from Wuhan University in 2019 and ME.ng degree from Nanyang Technology University in 2021 working with Prof Jiang Xudong (https://personal.ntu.edu.sg/exdjiang/) and Dr Qian Zheng (https://q-zh.github.io/).
 [Email](jinnan.c@nus.edu.sg) / 
