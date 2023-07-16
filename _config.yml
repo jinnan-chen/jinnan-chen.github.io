@@ -7,7 +7,7 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Jinmelo/Homepage"
+title                    : "Jin's Homepage"
 title_separator          : "-"
 name                     : &name "Jinnan Chen"
 description              : &description "PhD candidate at NUS working on 3D Computer Vision"
