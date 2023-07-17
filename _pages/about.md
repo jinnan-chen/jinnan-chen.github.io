@@ -13,3 +13,8 @@ I received my B.E. degree from Wuhan University in 2019. I received ME.ng degree
 
 Currently, my research intersts are mainly on 3D computer vision, especially on 3D Human Digitization, including **Reconstruction**(implicit functions like Neural Radiance Fields), **animation** (Skining weights estimation and pose transferring) and **Genration**(Diffusion-based human generation). I am looking for academic discussions and collaborations.
 
+
+Teaching
+------
+\[2022] CS5340 Uncertainty Modelling in AI, National University of Singapore
+\[2022] CS5477 3D Computer Vision, National University of Singapore
