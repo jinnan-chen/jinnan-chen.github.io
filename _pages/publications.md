@@ -8,13 +8,13 @@ author_profile: true
 
 ## 2023
 
-* Weakly-supervised 3D Pose Transfer with Keypoints [[Arxiv]](https://arxiv.org/abs/2307.13459)\
+* Weakly-supervised 3D Pose Transfer with Keypoints. [[Arxiv]](https://arxiv.org/abs/2307.13459)\
   **Jinnan Chen**, Chen Li, Gim Hee Lee \
   *To appear at IEEE International Conference on Computer Vision (**ICCV**) 2023*
   
 ## 2021
 
-* Single image reflection removal with absorption effect [[paper]](https://openaccess.thecvf.com/content/CVPR2021/html/Zheng_Single_Image_Reflection_Removal_With_Absorption_Effect_CVPR_2021_paper.html)
+* Single image reflection removal with absorption effect. [[paper]](https://openaccess.thecvf.com/content/CVPR2021/html/Zheng_Single_Image_Reflection_Removal_With_Absorption_Effect_CVPR_2021_paper.html)
 [[code]](https://github.com/q-zh/absorption)\
   Qian Zheng, Boxin Shi, **Jinnan Chen**, Xudong Jiang, Ling-Yu Duan, Alex C. Kot \
   *Published at IEEE Conference on Computer Vision and Pattern Recognition (**CVPR**) 2021*
