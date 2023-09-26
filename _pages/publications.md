@@ -8,7 +8,8 @@ author_profile: true
 
 ## 2023
 
-* Weakly-supervised 3D Pose Transfer with Keypoints. [[arXiv]](https://arxiv.org/abs/2307.13459)[[page]](https://jinnan-chen.github.io/ws3dpt/)\
+* Weakly-supervised 3D Pose Transfer with Keypoints. [[arXiv]](https://arxiv.org/abs/2307.13459)
+[[page]](https://jinnan-chen.github.io/ws3dpt/)\
   **Jinnan Chen**, Chen Li, Gim Hee Lee \
   *To appear at IEEE International Conference on Computer Vision (**ICCV**) 2023*
   
