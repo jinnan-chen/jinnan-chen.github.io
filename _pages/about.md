@@ -26,6 +26,6 @@ Conference on Neural Information Processing Systems(NIPS)
 
 Awards
 ------
-Wuhan University Excellent Student
-NUS Research Scholarship
-NUS Research Achievement
+Wuhan University Excellent Student\
+NUS Research Scholarship\
+NUS Research Achievement\
