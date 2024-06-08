@@ -47,10 +47,10 @@
     <!-- other links -->
     <div class="is-flex is-justify-content-center">
       <span class="icon-text mx-1">
-        <a class="button is-dark" href="https://arxiv.org/abs/" role="button" target="_blank"> <span class="icon"> <ion-icon name="document-outline"></ion-icon> </span> <span> Arxiv </span>  </a> 
+        <a class="button is-dark" href="https://arxiv.org/abs/2307.13459" role="button" target="_blank"> <span class="icon"> <ion-icon name="document-outline"></ion-icon> </span> <span> Arxiv </span>  </a> 
       </span>
       <span class="icon-text mx-1">
-        <a class="button is-dark" href="https://github.com/jinnan-chen/HGM" role="button" target="_blank"> <span class="icon"> <ion-icon name="logo-github"></ion-icon> </span> <span> Code </span> </a> 
+        <a class="button is-dark" href="https://github.com/jinnan-chen/3D-Pose-Transfer” role="button" target="_blank"> <span class="icon"> <ion-icon name="logo-github"></ion-icon> </span> <span> Code </span> </a> 
       </span>
      
     </div>
@@ -63,23 +63,31 @@
     <!-- abstract -->
     <p class="title is-3 mt-5 has-text-centered"> Abstract </p>
     <p class="content is-size-6 has-text-left">
-        In this work, we tackle the task of learning generalizable 3D human Gaussians
-        from a single image. The main challenge for this task is to recover detailed
-        geometry and appearance, especially for the unobserved regions. To this end, we
-        propose single-view generalizable Human Gaussian model (HGM), a diffusion-guided 
-        framework for 3D human modeling from a single image. We design a diffusion-based 
-        coarse-to-fine pipeline, where the diffusion model is adapted to refine novel-view 
-        images rendered from a coarse human Gaussian model. 
-        The refined images are then used together with the input image to learn a refined human
-        Gaussian model. Although effective in hallucinating the unobserved views, the
-        approach may generate unrealistic human pose and shapes due to the lack of
-        supervision. We circumvent this problem by further encoding the geometric priors
-        from SMPL model. Specifically, we propagate geometric features from SMPL
-        volume to the predicted Gaussians via sparse convolution and attention mechanism.
-        We validate our approach on publicly available datasets and demonstrate that
-        it significantly surpasses state-of-the-art methods in terms of PSNR and SSIM.
-        Additionally, our method exhibits strong generalization performance for in-the-wild
-        images.
+        The main challenges of 3D pose transfer are: 1) Lack
+        of paired training data with different characters perform-
+        ing the same pose; 2) Disentangling pose and shape infor-
+        mation from the target mesh; 3) Difficulty in applying to
+        meshes with different topologies. We thus propose a novel
+        weakly-supervised keypoint-based framework to overcome
+        these difficulties. Specifically, we use a topology-agnostic
+        keypoint detector with inverse kinematics to compute trans-
+        formations between the source and target meshes. Our
+        method only requires supervision on the keypoints, can be
+        applied to meshes with different topologies and is shape-
+        invariant for the target which allows extraction of pose-only
+        information from the target meshes without transferring
+        shape information. We further design a cycle reconstruction
+        to perform self-supervised pose transfer without the need
+        for ground truth deformed mesh with the same pose and
+        shape as the target and source, respectively. We evaluate
+        our approach on benchmark human and animal datasets,
+        where we achieve superior performance compared to the
+        state-of-the-art unsupervised approaches and even compa-
+        rable performance with the fully supervised approaches. We
+        test on the more challenging Mixamo dataset to verify our
+        approach’s ability in handling meshes with different topolo-
+        gies and complex clothes. Cross-dataset evaluation further
+        shows the strong generalization ability of our approach
     </p>
 
   <!-- method -->
