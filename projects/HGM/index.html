@@ -1,0 +1,252 @@
+<DOCTYPE html>
+
+    <title>NeRF-DS: Neural Radiance Fields for Dynamic Specular Objects</title>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-21408087-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-21408087-2');
+    </script>
+
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+
+
+    <style>
+        /* greek-ext */
+        @font-face {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 300;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fCBc4EsA.woff2) format('woff2');
+            unicode-range: U+1F00-1FFF;
+        }
+
+        /* greek */
+        @font-face {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 300;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fBxc4EsA.woff2) format('woff2');
+            unicode-range: U+0370-03FF;
+        }
+
+        /* latin-ext */
+        @font-face {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 300;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fChc4EsA.woff2) format('woff2');
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+
+        /* latin */
+        @font-face {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 300;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fBBc4.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
+        /* greek-ext */
+        @font-face {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu7mxKOzY.woff2) format('woff2');
+            unicode-range: U+1F00-1FFF;
+        }
+
+        /* greek */
+        @font-face {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu4WxKOzY.woff2) format('woff2');
+            unicode-range: U+0370-03FF;
+        }
+
+        /* latin-ext */
+        @font-face {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu7GxKOzY.woff2) format('woff2');
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+
+        /* latin */
+        @font-face {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu4mxK.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+    </style>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <body>
+        <div class="container">
+            <div class="row mb-2 mt-4" id="paper-title">
+                <h1 class="col-md-12 text-center">
+                    NeRF-DS
+                </h1>
+                <h3 class="col-md-12 text-center">
+                    Neural Radiance Fields for Dynamic Specular Objects
+                </h3>
+                <h3 class="col-md-12 text-center">
+                    <small>CVPR 2023</small>
+                </h3>
+            </div>
+
+            <div class="row" id="authors">
+                <div class="mx-auto text-center">
+                    <ul class="list-inline mb-0">
+                        <li class="list-inline-item">
+                            <a href="">Zhiwen Yan</a>
+
+                        <li class="list-inline-item">
+                            <a href="https://chaneyddtt.github.io/">Chen Li</a>
+
+                        <li class="list-inline-item">
+                            <a href="https://www.comp.nus.edu.sg/~leegh/">Gim Hee Lee</a>
+                    </ul>
+                    <p id="institution">National University of Singapore</p>
+                </div>
+            </div>
+
+            <div class="row mb-2" id="links">
+                <div class="mx-auto col-md-6 col-md-offset-6">
+                    <ul class="nav nav-pills nav-justified">
+                        <li class="nav-item text-center">
+                            <a href="http://arxiv.org/abs/2303.14435">
+                            <image src="img/paper_snapshot.png" height="60px">
+                                <h6><strong>Paper</strong></h6>
+                            </image>
+                            </a>
+                        </li>
+                        <li class="nav-item text-center">
+                            <a href="https://github.com/JokerYan/NeRF-DS">
+                            <image src="img/github.png" height="60px">
+                                <h6><strong>Code</strong></h6>
+                            </image>
+                            </a>
+                        </li>
+                        <li class="nav-item text-center">
+                            <a href="https://github.com/JokerYan/NeRF-DS/releases/tag/v0.1-pre-release">
+                            <image src="img/database.png" height="60px">
+                                <h6><strong>Data</strong></h6>
+                            </image>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-12 mx-auto">
+                <video width="100%" controls autoplay muted loop>
+                  <source src="videos/concat_h264.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+                </video>
+                </div>
+            </div>
+
+            <div class="row mb-3", id="abstract">
+                <div class="col-md-12 mx-auto">
+                    <h4>Abstract</h4>
+                    <p class="text-justify">
+                     In this work, we tackle the task of learning generalizable 3D human Gaussians
+                      from a single image. The main challenge for this task is to recover detailed
+                      geometry and appearance, especially for the unobserved regions. To this end, we
+                      propose single-view generalizable Human Gaussian model (HGM), a diffusion-
+                      guided framework for 3D human modeling from a single image. We design a
+                      diffusion-based coarse-to-fine pipeline, where the diffusion model is adapted to
+                      refine novel-view images rendered from a coarse human Gaussian model. The
+                      refined images are then used together with the input image to learn a refined human
+                      Gaussian model. Although effective in hallucinating the unobserved views, the
+                      approach may generate unrealistic human pose and shapes due to the lack of
+                      supervision. We circumvent this problem by further encoding the geometric priors
+                      from SMPL model. Specifically, we propagate geometric features from SMPL
+                      volume to the predicted Gaussians via sparse convolution and attention mechanism.
+                      We validate our approach on publicly available datasets and demonstrate that
+                      it significantly surpasses state-of-the-art methods in terms of PSNR and SSIM.
+                      Additionally, our method exhibits strong generalization performance for in-the-wild
+                      images.<br>
+                    </p>
+
+                    <img src="img/specular under translation rotation.png" class="img-responsive" style="transform: scale(0.7)">
+
+                    <p class="text-justify">
+                    As shown in the figure above, a surface can reflect different colors after a translation or rotation.
+                    However, existing dynamic NeRF models still warp the points to the same canonical position.
+                    The point before and after the movement will be forced to render the same color and could cause severe artifact.
+                    To address this issue, the rendered color should also be conditioned on the surface position and orientation before the warping.
+                    </p>
+
+                    <img src="img/full_architecture.png" class="img-responsive">
+
+                    <br><p class="text-justify">
+                    Our network uses a surface aware NeRF and a mask guided deformation field to produce more accurate reconstruction of dynamic specular objects.
+                    The surface aware NeRF renders the point colors conditioned on the surface point position and predicted orientation in the observation space before warping.
+                    The mask guided deformation field predict the deformation based on a predicted mask of the dynamic object to better establish point correspondence even if the point colors change drastically.
+                    </p>
+
+                    <br><p class="text-justify">
+                    Due to the lack of dynamic specular objects in existing datasets, we collect a new dataset of moving specular objects in realistic environments.
+                    You can download the dataset from <a href="https://github.com/JokerYan/NeRF-DS/releases/tag/v0.1-pre-release">here</a>.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row mb-4">
+                <div class="col-md-12 mx-auto">
+                <div class="form-group col-md-offset-1 row-md-offset-1">
+                    <h4 class="mb-3">Citation</h4>
+                    <textarea id="bibtex" class="form-control" readonly>
+@article{jnchen24hgm,
+    title={NGeneralizable Human Gaussians from Single-View Image},
+    author={Jinnan Chen and Chen Li and Jianfeng Zhang and Hanlin Chen and Buzhen Huang and Gim Hee Lee},
+    
+    year={2024}
+}
+                    </textarea>
+                </div>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-md-12 mx-auto">
+                    <h4>Acknowledgements</h4>
+                    <p class="text-justify">
+                    This research is supported by the National Research Foundation, Singapore under its AI Singapore Programme (AISG Award
+                    No: AISG2-RP-2021-024), and the Tier 2 grant MOE-T2EP20120-0011 from the
+                    Singapore Ministry of Education.
+                    </p>
+                </div>
+            </div>
+        </div> <!-- container -->
+    </body>
+</DOCTYPE>
