@@ -28,4 +28,4 @@ Awards
 ------
 Wuhan University Excellent Student\
 NUS Research Scholarship\
-NUS Research Achievement\
+NUS Research Achievement
