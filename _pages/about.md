@@ -16,10 +16,16 @@ Currently, my research interests are mainly in 3D computer vision, especially in
 
 Teaching
 ------
-\[2022] CS5340 Uncertainty Modelling in AI, National University of Singapore \
-\[2022] CS5477 3D Computer Vision, National University of Singapore
+[2022] CS5340 Uncertainty Modelling in AI, National University of Singapore \
+[2022] CS5477 3D Computer Vision, National University of Singapore
 
 Reviewer
 ------
-Computer Vision and Pattern Recognition Conference (CVPR)
+Computer Vision and Pattern Recognition Conference (CVPR)\
 Conference on Neural Information Processing Systems(NIPS)
+
+Awards
+------
+Wuhan University Excellent Student
+NUS Research Scholarship
+NUS Research Achievement
