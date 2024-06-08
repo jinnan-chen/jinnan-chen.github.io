@@ -22,7 +22,7 @@ Teaching
 Reviewer
 ------
 Computer Vision and Pattern Recognition Conference (CVPR)\
-Conference on Neural Information Processing Systems(NIPS)
+Neural Information Processing Systems(NIPS)
 
 Awards
 ------
