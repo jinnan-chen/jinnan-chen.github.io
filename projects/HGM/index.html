@@ -196,15 +196,16 @@
                       Additionally, our method exhibits strong generalization performance for in-the-wild
                       images.<br>
                     </p>
-
-                    <img src="img/3dvis.png" class="img-responsive" style="transform: scale(0.7)">
-
                     <p class="text-justify">
                     Our framework and HGM model. (Top) Our framework consists of three steps: 1) Coarse Gaussians prediction with human prior by HGM. 2) Back view refinement with diffusion models. 3) Two view reconstruction to get the refined $G_{refine}$. (Bottom) Our HGM model consists of two branches of Gaussians prediction by UNet and Transformer. 
 Features f_smpl and f_u sampled by the Gaussian centers from the SMPL G_smpl$ and image G_u branches are then fused to get the final ouput. 
                     </p>
-
                     <img src="img/full_architecture.pdf" class="img-responsive">
+
+
+
+                    3D reconstruction visualization for some in the wild images, the first row are input images, the second row are texure-less meshes and textured meshes
+                    <img src="img/3dvis.png" class="img-responsive" style="transform: scale(0.7)">
 
                  
 
@@ -212,11 +213,17 @@ Features f_smpl and f_u sampled by the Gaussian centers from the SMPL G_smpl$ an
                 </div>
             </div>
 
+
+
+            
             <div class="row mb-4">
                 <div class="col-md-12 mx-auto">
                 <div class="form-group col-md-offset-1 row-md-offset-1">
                     <h4 class="mb-3">Citation</h4>
                     <textarea id="bibtex" class="form-control" readonly>
+
+
+                        
 @article{jnchen24hgm,
     title={Generalizable Human Gaussians from Single-View Image},
     author={Jinnan Chen and Chen Li and Jianfeng Zhang and Hanlin Chen and Buzhen Huang and Gim Hee Lee},
