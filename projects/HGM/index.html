@@ -200,10 +200,8 @@
                     <img src="img/3dvis.png" class="img-responsive" style="transform: scale(0.7)">
 
                     <p class="text-justify">
-                    As shown in the figure above, a surface can reflect different colors after a translation or rotation.
-                    However, existing dynamic NeRF models still warp the points to the same canonical position.
-                    The point before and after the movement will be forced to render the same color and could cause severe artifact.
-                    To address this issue, the rendered color should also be conditioned on the surface position and orientation before the warping.
+                    Our framework and HGM model. (Top) Our framework consists of three steps: 1) Coarse Gaussians prediction with human prior by HGM. 2) Back view refinement with diffusion models. 3) Two view reconstruction to get the refined $G_{refine}$. (Bottom) Our HGM model consists of two branches of Gaussians prediction by UNet and Transformer. 
+Features f_smpl and f_u sampled by the Gaussian centers from the SMPL G_smpl$ and image G_u branches are then fused to get the final ouput. 
                     </p>
 
                     <img src="img/full_architecture.pdf" class="img-responsive">
