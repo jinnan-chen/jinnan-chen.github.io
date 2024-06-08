@@ -92,7 +92,14 @@
           Additionally, our method exhibits strong generalization performance for in-the-wild
           images.
     </p>
-    
+
+  <!-- method -->
+  <p class="title is-3 mt-5 has-text-centered"> method </p>
+  <p class="content is-size-6 has-text-left">
+   <img src="img/full_architecture.png" class="img-responsive">
+    Our framework and HGM model. (Top) Our framework consists of three steps: 1) Coarse Gaussians prediction with human prior by HGM. 2) Back view refinement with diffusion models. 3) Two view reconstruction to get the refined $G_{refine}$. (Bottom) Our HGM model consists of two branches of Gaussians prediction by UNet and Transformer. 
+    Features f_smpl and f_u sampled by the Gaussian centers from the SMPL G_smpl$ and image G_u branches are then fused to get the final ouput. 
+  </p> 
     <!-- results (videos) -->
             <div class="row mb-3">
                 <div class="col-md-12 mx-auto">
@@ -133,7 +140,7 @@
       </div>
     </div>
     
-    <!-- citation -->
+  <!-- citation -->
     <div class="card mt-4">
       <header class="card-header">
         <p class="card-header-title"> Citation </p>
