@@ -1,0 +1,150 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- bulma css template -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <!-- ionicons -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <!-- model viewer -->
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js"></script>
+  <title>
+    HGM
+  </title>
+  <link rel="icon" href="icon.ico">
+</head>
+<body>
+  <section class="section">
+
+  <div class="container has-text-centered">
+    <!-- paper title -->
+    <p class="title is-3"> Generalizable Human Gaussians from Single-View Image </p>
+    <!-- publication -->
+    <p class="subtitle is-4"> Arxiv 2024 </p>
+    <!-- authors -->
+    <p class="title is-5 mt-2"> 
+
+
+       <a href="https://jinnan-chen.github.io/">Jinnan Chen</a><sup>1</sup>, 
+       <a href="https://chaneyddtt.github.io/">Chen Li</a><sup>1</sup>,    
+    <a href="https://www.comp.nus.edu.sg/~leegh/">Gim Hee Lee</a><sup>1</sup>, 
+<!--       <a href="https://me.kiui.moe/" target="_blank">Jiaxiang Tang</a><sup>1</sup>, 
+      <a href="https://frozenburning.github.io/" target="_blank">Zhaoxi Chen</a><sup>2</sup>, 
+      <a href="https://charlescxk.github.io/" target="_blank">Xiaokang Chen</a><sup>1</sup>, 
+      <a href="https://tengfei-wang.github.io/" target="_blank">Tengfei Wang</a><sup>3</sup>, 
+      <a href="http://www.cis.pku.edu.cn/info/1177/1378.htm" target="_blank">Gang Zeng</a><sup>1</sup>,
+      <a href="https://liuziwei7.github.io/" target="_blank">Ziwei Liu</a><sup>2</sup> -->
+    </p>
+    <!-- affiliations -->
+    <p class="subtitle is-5"> 
+      <sup>1</sup> National University of Singapore &nbsp;
+      <sup>2</sup> ByteDance &nbsp;
+<!--       <sup>3</sup> Shanghai AI Lab &nbsp; -->
+    </p>
+
+    <!-- other links -->
+    <div class="is-flex is-justify-content-center">
+      <span class="icon-text mx-1">
+        <a class="button is-dark" href="https://arxiv.org/abs/" role="button" target="_blank"> <span class="icon"> <ion-icon name="document-outline"></ion-icon> </span> <span> Arxiv </span>  </a> 
+      </span>
+      <span class="icon-text mx-1">
+        <a class="button is-dark" href="https://github.com/jinnan-chen/HGM" role="button" target="_blank"> <span class="icon"> <ion-icon name="logo-github"></ion-icon> </span> <span> Code </span> </a> 
+      </span>
+     
+    </div>
+   
+  </div>
+
+  <!-- main container -->
+  <div class="container is-max-desktop has-text-centered">
+
+    <!-- abstract -->
+    <p class="title is-3 mt-5 has-text-centered"> Abstract </p>
+    <p class="content is-size-6 has-text-left">
+        In this work, we tackle the task of learning generalizable 3D human Gaussians
+        from a single image. The main challenge for this task is to recover detailed
+        geometry and appearance, especially for the unobserved regions. To this end, we
+        propose single-view generalizable Human Gaussian model (HGM), a diffusion-guided 
+        framework for 3D human modeling from a single image. We design a diffusion-based 
+        coarse-to-fine pipeline, where the diffusion model is adapted to refine novel-view 
+        images rendered from a coarse human Gaussian model. 
+        The refined images are then used together with the input image to learn a refined human
+        Gaussian model. Although effective in hallucinating the unobserved views, the
+        approach may generate unrealistic human pose and shapes due to the lack of
+        supervision. We circumvent this problem by further encoding the geometric priors
+        from SMPL model. Specifically, we propagate geometric features from SMPL
+        volume to the predicted Gaussians via sparse convolution and attention mechanism.
+        We validate our approach on publicly available datasets and demonstrate that
+        it significantly surpasses state-of-the-art methods in terms of PSNR and SSIM.
+        Additionally, our method exhibits strong generalization performance for in-the-wild
+        images.
+    </p>
+
+  <!-- method -->
+  <p class="title is-3 mt-5 has-text-centered"> Method </p>
+  <p class="content is-size-6 has-text-left">
+   <img src="img/full_architecture.png" class="img-responsive">
+    Our framework and HGM model. (Top) Our framework consists of three steps: 1) Coarse Gaussians prediction with human prior by HGM. 2) Back view refinement with diffusion models. 3) Two view reconstruction to get the refined G_refine. (Bottom) Our HGM model consists of two branches of Gaussians prediction by UNet and Transformer. 
+    Features f_smpl and f_u sampled by the Gaussian centers from the SMPL G_smpl and image G_u branches are then fused to get the final ouput. 
+  </p> 
+  <!-- results (videos) -->
+            <div class="row mb-3">
+                <div class="col-md-12 mx-auto">
+                <video width="100%" controls autoplay muted loop>
+                  <source src="videos/rendering.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+                </video>
+                </div>
+            </div>
+    <!-- 3d model viewer -->
+    <p class="title is-3 mt-5 has-text-centered"> Exported Meshes </p>
+    <div class="level">
+      <div class="level-item">
+        <model-viewer src="meshes/002_gau.glb" style="width: 100%; height: 300px;" auto-rotate shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+      </div>
+      <div class="level-item">
+        <model-viewer src="meshes/pdf3.glb" style="width: 100%; height: 300px;" auto-rotate shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+      </div>
+      <div class="level-item">
+        <model-viewer src="meshes/tea.glb" style="width: 100%; height: 300px;" auto-rotate shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+      </div>
+      <div class="level-item">
+        <model-viewer src="meshes/tea2.glb" style="width: 100%; height: 300px;" auto-rotate shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+      </div>
+    </div>
+    <div class="level">
+      <div class="level-item">
+        <model-viewer src="meshes/0017_000_0178_00041_07_00141_gau.glb" style="width: 100%; height: 300px;" auto-rotate shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+      </div>
+      <div class="level-item">
+        <model-viewer src="meshes/0043_000_0468_00074_03_00061_gau.glb" style="width: 100%; height: 300px;" auto-rotate shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+      </div>
+      <div class="level-item">
+        <model-viewer src="meshes/0048_000_0528_00078_01_00221_gau.glb" style="width: 100%; height: 300px;" auto-rotate shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+      </div>
+      <div class="level-item">
+        <model-viewer src="meshes/0032_000_0372_00069_03_00021_gau.glb" style="width: 100%; height: 300px;" auto-rotate shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+      </div>
+    </div>
+    
+  <!-- citation -->
+    <div class="card mt-4">
+      <header class="card-header">
+        <p class="card-header-title"> Citation </p>
+      </header>
+      <div class="card-content is-size-5 has-text-left">
+<pre><code>@article{jnchen23ws3dpt,
+                title={Weakly-supervised 3D Pose Transfer with Keypoints},
+                author={Jinnan Chen and Chen Li Gim Hee Lee},
+                year={2023}
+}</code></pre>
+      </div>
+    </div>
+  </div>
+
+
+  </section>
+</body>
+</html>
