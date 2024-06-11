@@ -7,7 +7,7 @@ author_profile: true
 
 
 
-* Weakly-supervised 3D Pose Transfer with Keypoints. [[arXiv]](https://arxiv.org/abs/2406.06050)
+* Generalizable Human Gaussians from Single-View Image. [[arXiv]](https://arxiv.org/abs/2406.06050)
 [[page]](https://github.com/jinnan-chen/HGM)\
   **Jinnan Chen**, Chen Li, Jianfeng Zhang, Hanlin Chen, Buzhen Huang, Gim Hee Lee} \
   *Arxiv 2024*
