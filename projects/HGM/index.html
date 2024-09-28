@@ -98,95 +98,271 @@
     Our framework and HGM model. (Top) Our framework consists of three steps: 1) Coarse Gaussians prediction. 2) SMPL-X refinement. 3) Back view refinement with our controlnet. 4) Two view reconstruction to get the refined G_refine.
   </p> 
     
-<section class="section links-section">
-    <div class="section-title">
-    </div>
-    <div class="details links-table">
-        <table cellspacing="0" cellpadding="0">
-            <tbody>
-                <tr>
-                    <td width="16.5%">
-                        Input Image
-                    </td>
-                    <td width="16.5%">
-                        SiTH
-                    </td>
-                    <td width="16.5%">
-                        LGM
-                    </td>
-                    <td width="16.5%">
-                        SIFU
-                    </td>
-                    <td width="16.5%">
-                        SV3D
-                    </td>
-                    <td width="16.5%">                            
-                        Ours
-                    </td>
-                </tr>
+ <section class="section links-section">
+        <div class="section-title">
+        </div>
+        <div class="details links-table">
+            <table cellspacing="0" cellpadding="0">
+                <tbody>
+                    <tr>
+                        <td width="16.5%">
+                            Input Image
+                        </td>
+                        <td width="16.5%">
+                            SiTH
+                        </td>
+                        <td width="16.5%">
+                            LGM
+                        </td>
+                        <td width="16.5%">
+                            SIFU
+                        </td>
+                        <td width="16.5%">
+                            SV3D
+                        </td>
+                        <td width="16.5%">                            
+                            Ours
+                        </td>
+                    </tr>
 
-                <tr>
-                    <td>
-                    <div class="img-comp-container">
-                        <div class="img-comp-img">
-                            <img class="preload" src="videos/0448_00073_02_00221ori_rgba_sith.jpg" width="100%" alt="Input Image">
+                    <tr>
+                        <td>
+                        <div class="img-comp-container">
+                            <div class="img-comp-img">
+                                <img class="preload" src="videos/0448_00073_02_00221ori.jpg" width="100%">
+                            </div>
                         </div>
-                    </div>
-                    </td>
-                    <td>
-                    <div class="img-comp-container">
-                        <div class="img-comp-img">
-                            <video id="v0" width="100%" autoplay loop muted controls>
-                                <source src="videos/0448_00073_02_00221or.mp4" type="video/mp4">
-                            </video>
+                          
+                        </td>
+                        <td>
+                        <div class="img-comp-container">
+                            <div class="img-comp-img">
+                                <video id="v0" width="100%" autoplay="" loop="" muted="" controls="">
+                                    <source src="videos/0448_00073_02_00221or_rgba_sith.mp4" type="video/mp4">
+                                </video>
+                            </div>
                         </div>
-                    </div>
-                    </td> 
-                    <td>
-                    <div class="img-comp-container">
-                        <div class="img-comp-img">
-                            <video id="v1" width="100%" autoplay loop muted controls>
-                                <source src="videos/0448_00073_02_00221ori.mp4" type="video/mp4">
-                            </video>
+                          
+                        </td> 
+                        <td>
+                        <div class="img-comp-container">
+                            <div class="img-comp-img">
+                                <video id="v0" width="100%" autoplay="" loop="" muted="" controls="">
+                                    <source src="videos/0448_00073_02_00221ori.mp4" type="video/mp4">
+                                </video>
+                            </div>
                         </div>
-                    </div>
-                    </td> 
-                    <td>
-                    <div class="img-comp-container">
-                        <div class="img-comp-img">
-                            <video id="v2" width="100%" autoplay loop muted controls>
-                                <source src="videos/0448_00073_02_00221ori_refine.mp4" type="video/mp4">
-                            </video>
+                          
+                        </td> 
+                        <td>
+                        <div class="img-comp-container">
+                            <div class="img-comp-img">
+                                <video id="v0" width="100%" autoplay="" loop="" muted="" controls="">
+                                    <source src="videos/0448_00073_02_00221ori_refine.mp4" type="video/mp4">
+                                </video>
+                            </div>
                         </div>
-                    </div>
-                    </td> 
-                    <td>
-                    <div class="img-comp-container">
-                        <div class="img-comp-img">
-                            <video id="v3" width="100%" autoplay loop muted controls>
-                                <source src="videos/0448_00073_02_00221ori_sv.mp4" type="video/mp4">
-                            </video>
+                          
+                        </td> 
+                        <td>
+                        <div class="img-comp-container">
+                            <div class="img-comp-img">
+                                <video id="v0" width="100%" autoplay="" loop="" muted="" controls="">
+                                    <source src="videos/0448_00073_02_00221ori_sv.mp4" type="video/mp4">
+                                </video>
+                            </div>
                         </div>
-                    </div>
-                    </td> 
-                    <td>
-                    <div class="img-comp-container">
-                        <div class="img-comp-img">
-                            <video id="v4" width="100%" autoplay loop muted controls>
-                                <source src="videos/0448_00073_02_00221_0_5.mp4" type="video/mp4">
-                            </video>
+                          
+                        </td> 
+                        <td>
+                        <div class="img-comp-container">
+                            <div class="img-comp-img">
+                                <video id="v0" width="100%" autoplay="" loop="" muted="" controls="">
+                                    <source src="videos/0448_00073_02_00221_0_5.mp4" type="video/mp4">
+                                </video>
+                            </div>
                         </div>
-                    </div>
-                    </td> 
-                </tr>
+                        </td> 
+                    </tr>
 
-                <!-- 其他行的内容保持不变 -->
-                <!-- ... -->
+                    <tr>
+                        <td>
+                        <div class="img-comp-container">
+                            <div class="img-comp-img">
+                                <img class="preload" src="videos/0390_00070_03_00101ori.jpg" width="100%">
+                            </div>
+                        </div>
+                        </td>
+                        <td>
+                        <div class="img-comp-container">
+                            <div class="img-comp-img">
+                                <video id="v0" width="100%" autoplay="" loop="" muted="" controls="">
+                                    <source src="videos/0390_00070_03_00101ori_rgba_reco.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                        </td> 
+                        <td>
+                        <div class="img-comp-container">
+                            <div class="img-comp-img">
+                                <video id="v0" width="100%" autoplay="" loop="" muted="" controls="">
+                                    <source src="videos/0390_00070_03_00101ori.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                          
+                        <td>
+                        <div class="img-comp-container">
+                            <div class="img-comp-img">
+                                <video id="v0" width="100%" autoplay="" loop="" muted="" controls="">
+                                    <source src="videos/0390_00070_03_00101ori_refine.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                          
+                        <td>
+                        <div class="img-comp-container">
+                            <div class="img-comp-img">
+                                <video id="v0" width="100%" autoplay="" loop="" muted="" controls="">
+                                    <source src="videos/0390_00070_03_00101ori_sv.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                          
+                        </td> 
+                        <td>
+                        <div class="img-comp-container">
+                            <div class="img-comp-img">
+                                <video id="v0" width="100%" autoplay="" loop="" muted="" controls="">
+                                    <source src="videos/0390_00070_03_00101_0_5.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                        </td> 
+                    </tr>
 
-            </tbody>
-        </table>
-    </div>
-</section>
+                    <tr>
+                        <td>
+                        <div class="img-comp-container">
+                            <div class="img-comp-img">
+                                <img class="preload" src="videos/0083_00023_11_00061ori.jpg" width="100%">
+                            </div>
+                        </div>
+                          
+                        </td>
+                        <td>
+                        <div class="img-comp-container">
+                            <div class="img-comp-img">
+                                <video id="v0" width="100%" autoplay="" loop="" muted="" controls="">
+                                    <source src="videos/0083_00023_11_00061ori_rgba_reco.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                          
+                        </td> 
+                        <td>
+                        <div class="img-comp-container">
+                            <div class="img-comp-img">
+                                <video id="v0" width="100%" autoplay="" loop="" muted="" controls="">
+                                    <source src="videos/0083_00023_11_00061ori.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                          
+                        </td> 
+                        <td>
+                        <div class="img-comp-container">
+                            <div class="img-comp-img">
+                                <video id="v0" width="100%" autoplay="" loop="" muted="" controls="">
+                                    <source src="videos/0083_00023_11_00061ori_refine.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                          
+                        </td> 
+                        <td>
+                        <div class="img-comp-container">
+                            <div class="img-comp-img">
+                                <video id="v0" width="100%" autoplay="" loop="" muted="" controls="">
+                                    <source src="videos/0083_00023_11_00061ori_sv.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                          
+                        </td> 
+                        <td>
+                        <div class="img-comp-container">
+                            <div class="img-comp-img">
+                                <video id="v0" width="100%" autoplay="" loop="" muted="" controls="">
+                                    <source src="videos/0083_00023_11_00061_0_5.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                        </td> 
+                    </tr>
+
+                    <tr>
+                        <td>
+                        <div class="img-comp-container">
+                            <div class="img-comp-img">
+                                <img class="preload" src="videos/0443_00073_01_00181ori.jpg" width="100%">
+                            </div>
+                        </div>
+                        </td>
+                        <td>
+                        <div class="img-comp-container">
+                            <div class="img-comp-img">
+                                <video id="v0" width="100%" autoplay="" loop="" muted="" controls="">
+                                    <source src="videos/0443_00073_01_00181ori_rgba_reco.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                        </td> 
+                        <td>
+                        <div class="img-comp-container">
+                            <div class="img-comp-img">
+                                <video id="v0" width="100%" autoplay="" loop="" muted="" controls="">
+                                    <source src="videos/0443_00073_01_00181ori.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                          
+                        </td> 
+                        <td>
+                        <div class="img-comp-container">
+                            <div class="img-comp-img">
+                                <video id="v0" width="100%" autoplay="" loop="" muted="" controls="">
+                                    <source src="videos/0443_00073_01_00181ori_refine.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                          
+                        </td> 
+                        <td>
+                        <div class="img-comp-container">
+                            <div class="img-comp-img">
+                                <video id="v0" width="100%" autoplay="" loop="" muted="" controls="">
+                                    <source src="videos/0443_00073_01_00181ori_sv.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                          
+                        </td> 
+                        <td>
+                        <div class="img-comp-container">
+                            <div class="img-comp-img">
+                                <video id="v0" width="100%" autoplay="" loop="" muted="" controls="">
+                                    <source src="videos/0443_00073_01_00181_0_5.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                        </td> 
+                    </tr>
+
+
+            </tbody></table>
+        </div>
+    </section>
     
   <!-- results (videos) -->
             <div class="row mb-3">
