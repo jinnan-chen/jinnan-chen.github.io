@@ -8,7 +8,7 @@ author_profile: true
 
 
 * Generalizable Human Gaussians from Single-View Image. [[arXiv]](https://arxiv.org/abs/2406.06050)
-[[page]](https://github.com/jinnan-chen/HGM)\
+[[page]](https://jinnan-chen.github.io/projects/HGM/)\
   **Jinnan Chen**, Chen Li, Jianfeng Zhang, Lingting Zhu, Buzhen Huang, Hanlin Chen, Gim Hee Lee \
   *Arxiv 2024*
 
