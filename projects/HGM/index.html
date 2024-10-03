@@ -71,14 +71,15 @@
     
     <!-- main container -->
 
+
+    
+
+    <!-- abstract -->
     <div class="container">
         <div class="text-center">
             <img src="img/teaser4.png" class="img-responsive">
         </div>
     </div>
-    
-
-    <!-- abstract -->
     <p class="title is-3 mt-5 has-text-centered"> Abstract </p>
     <p class="content is-size-6 has-text-left">
     In this work, we tackle the task of learning 3D human Gaussians from a single image, focusing on recovering detailed appearance and geometry including unobserved regions. We introduce a single-view generalizable Human Gaussian Model (HGM), which employs a novel generate-then-refine pipeline with the guidance from human body prior and diffusion prior. Our approach uses a ControlNet to refine rendered back-view images from coarse predicted human Gaussians, then uses the refined image along with the input image to reconstruct refined human Gaussians. To mitigate the potential generation of unrealistic human poses and shapes, we incorporate human priors from the SMPL-X model as a dual branch, propagating image features from the SMPL-X volume to the image Gaussians using sparse convolution and attention mechanisms. Given that the initial SMPL-X estimation might be inaccurate, we gradually refine it with our HGM model. We validate our approach on several publicly available datasets. Our method surpasses previous methods in both novel view synthesis and surface reconstruction. Our approach also exhibits strong generalization for cross-dataset evaluation and in-the-wild images.
@@ -89,7 +90,7 @@
   <p class="title is-3 mt-5 has-text-centered"> Method </p>
   <p class="content is-size-6">
    <img src="img/full_architecture.png" class="img-responsive">
-    Our framework and HGM model. (Top) Our framework consists of three steps: 1) Coarse Gaussians prediction. 2) SMPL-X refinement. 3) Back view refinement with our controlnet. 4) Two view reconstruction to get the refined G_refine.
+    Our framework and HGM model. (Top) Our framework consists of the following steps: 1) Coarse Gaussians prediction with SMPL-X refinement. 2) Back view refinement with our ControlNet. 3) Two view reconstruction to get the refined G_refine.
   </p> 
     
  <section class="section links-section">
