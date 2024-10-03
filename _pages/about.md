@@ -8,13 +8,12 @@ redirect_from:
   - /about.html
 ---
 
-I'm currently a Ph.D. candidate at NUS School of Computing, under Prof [Gim hee Lee](https://www.comp.nus.edu.sg/~leegh/). 
-I received my B.E. degree from Wuhan University in 2019. I received an MEng degree from Nanyang Technology University in 2021 with a GPA of 5.0/5.0. During my master's study, I was supervised by Prof [Jiang Xudong](https://personal.ntu.edu.sg/exdjiang/) and Dr [Qian Zheng](https://person.zju.edu.cn/zq). I interned at Bytedance AI Lab.
+I'm currently a Ph.D. candidate at NUS School of Computing, supervised by Prof [Gim hee Lee](https://www.comp.nus.edu.sg/~leegh/). 
+I received my B.E. degree from Wuhan University in 2019. I received an MEng degree from Nanyang Technology University in 2021 with a GPA of 5.0/5.0. During my master's study, I was supervised by Prof [Jiang Xudong](https://personal.ntu.edu.sg/exdjiang/) and Dr [Qian Zheng](https://person.zju.edu.cn/zq). I interned at Bytedance AI Lab and Tencent Games.
 
 
 Currently, my research interests are mainly in 3D computer vision, especially in 3D Assets Generation and
- Human Digitization, including **Reconstruction** (Implicit functions like Neural Radiance Fields and
-  3DGS), **Animation** (Skining weights estimation and pose transferring), and **Generation** (Diffusion-based generation).
+ Human Digitization, including **Reconstruction** (Neural Fields & 3DGS), **Animation** (Skinning & Rigging), and **Generation** (Diffusion & AR).
 
 
 Teaching
@@ -25,7 +24,8 @@ Teaching
 Reviewer
 ------
 Computer Vision and Pattern Recognition Conference (CVPR)\
-Neural Information Processing Systems(NIPS)
+Neural Information Processing Systems (NIPS)
+International Conference on Learning Representations (ICLR)
 
 Awards
 ------
