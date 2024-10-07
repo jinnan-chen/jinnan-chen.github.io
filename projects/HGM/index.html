@@ -23,24 +23,43 @@
       max-width: 800px;
       margin: 0 auto;
     }
-    .img-responsive {
-      max-width: 100%;
-      height: auto;
-    }
+
     .links-table td {
       padding: 0.5rem;
       vertical-align: top;
     }
-    .links-table img, .links-table video {
-      width: 100%;
-      max-width: 200px;
-      height: auto;
-    }
-    @media (max-width: 768px) {
-      .links-table {
-        font-size: 0.9rem;
-      }
-    }
+/* 控制比较表格中的图片和视频大小 */
+.links-table img, .links-table video {
+  width: 80%;
+  height: 200px; /* 固定高度为200像素 */
+  object-fit: cover; /* 保持宽高比，裁剪多余部分 */
+}
+
+/* 在移动设备上调整大小 */
+@media (max-width: 768px) {
+  .links-table img, .links-table video {
+    height: 150px; /* 在移动设备上减小高度到150像素 */
+  }
+}
+
+/* 控制顶部大图（teaser image）的大小 */
+.teaser-image {
+  max-width: 800px; /* 最大宽度为800像素 */
+  width: 100%; /* 宽度100%，但不超过max-width */
+  height: auto; /* 高度自动调整，保持宽高比 */
+  margin: 0 auto; /* 居中显示 */
+}
+
+/* 控制方法图（method image）的大小 */
+.method-image {
+  max-width: 1000px; /* 最大宽度为1000像素 */
+  width: 70%; /* 宽度100%，但不超过max-width */
+  height: auto; /* 高度自动调整，保持宽高比 */
+  margin: 0 auto; /* 居中显示 */
+}
+
+
+    
     .author-list {
       display: flex;
       flex-wrap: wrap;
@@ -49,6 +68,7 @@
     }
   </style>
 </head>
+  
 <body>
   <section class="section">
     <div class="container has-text-centered">
@@ -91,7 +111,7 @@
     
     <div class="container mt-6">
       <div class="has-text-centered">
-        <img src="img/teaser4.png" class="img-responsive" alt="Teaser image">
+        <img src="img/teaser4.png" class="teaser-image" alt="Teaser image">
       </div>
     </div>
     
@@ -105,7 +125,7 @@
     <div class="container mt-6">
       <p class="title is-3 has-text-centered">Method</p>
       <figure class="image">
-        <img src="img/full_architecture.png" class="img-responsive" alt="Method architecture">
+        <img src="img/full_architecture.png" class="method-image" alt="Method architecture">
       </figure>
       <p class="content is-size-6 mt-4">
         Our framework and HGM model. (Top) Our framework consists of the following steps: 1) Coarse Gaussians prediction with SMPL-X refinement. 2) Back view refinement with our ControlNet. 3) Two view reconstruction to get the refined G_refine.
@@ -167,14 +187,138 @@
               </figure>
             </td>
           </tr>
-          <!-- 其他行的结构类似，这里省略了重复内容 -->
+          <tr>
+            <td>
+              <figure class="image">
+                <img src="videos/0390_00070_03_00101ori.jpg" alt="Input Image 2">
+              </figure>
+            </td>
+            <td>
+              <figure class="image">
+                <video autoplay loop muted controls>
+                  <source src="videos/0390_00070_03_00101ori_rgba_reco.mp4" type="video/mp4">
+                </video>
+              </figure>
+            </td>
+            <td>
+              <figure class="image">
+                <video autoplay loop muted controls>
+                  <source src="videos/0390_00070_03_00101ori.mp4" type="video/mp4">
+                </video>
+              </figure>
+            </td>
+            <td>
+              <figure class="image">
+                <video autoplay loop muted controls>
+                  <source src="videos/0390_00070_03_00101ori_refine.mp4" type="video/mp4">
+                </video>
+              </figure>
+            </td>
+            <td>
+              <figure class="image">
+                <video autoplay loop muted controls>
+                  <source src="videos/0390_00070_03_00101ori_sv.mp4" type="video/mp4">
+                </video>
+              </figure>
+            </td>
+            <td>
+              <figure class="image">
+                <video autoplay loop muted controls>
+                  <source src="videos/0390_00070_03_00101_0_5.mp4" type="video/mp4">
+                </video>
+              </figure>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <figure class="image">
+                <img src="videos/0083_00023_11_00061ori.jpg" alt="Input Image 3">
+              </figure>
+            </td>
+            <td>
+              <figure class="image">
+                <video autoplay loop muted controls>
+                  <source src="videos/0083_00023_11_00061ori_rgba_reco.mp4" type="video/mp4">
+                </video>
+              </figure>
+            </td>
+            <td>
+              <figure class="image">
+                <video autoplay loop muted controls>
+                  <source src="videos/0083_00023_11_00061ori.mp4" type="video/mp4">
+                </video>
+              </figure>
+            </td>
+            <td>
+              <figure class="image">
+                <video autoplay loop muted controls>
+                  <source src="videos/0083_00023_11_00061ori_refine.mp4" type="video/mp4">
+                </video>
+              </figure>
+            </td>
+            <td>
+              <figure class="image">
+                <video autoplay loop muted controls>
+                  <source src="videos/0083_00023_11_00061ori_sv.mp4" type="video/mp4">
+                </video>
+              </figure>
+            </td>
+            <td>
+              <figure class="image">
+                <video autoplay loop muted controls>
+                  <source src="videos/0083_00023_11_00061_0_5.mp4" type="video/mp4">
+                </video>
+              </figure>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <figure class="image">
+                <img src="videos/0443_00073_01_00181ori.jpg" alt="Input Image 4">
+              </figure>
+            </td>
+            <td>
+              <figure class="image">
+                <video autoplay loop muted controls>
+                  <source src="videos/0443_00073_01_00181ori_rgba_reco.mp4" type="video/mp4">
+                </video>
+              </figure>
+            </td>
+            <td>
+              <figure class="image">
+                <video autoplay loop muted controls>
+                  <source src="videos/0443_00073_01_00181ori.mp4" type="video/mp4">
+                </video>
+              </figure>
+            </td>
+            <td>
+              <figure class="image">
+                <video autoplay loop muted controls>
+                  <source src="videos/0443_00073_01_00181ori_refine.mp4" type="video/mp4">
+                </video>
+              </figure>
+            </td>
+            <td>
+              <figure class="image">
+                <video autoplay loop muted controls>
+                  <source src="videos/0443_00073_01_00181ori_sv.mp4" type="video/mp4">
+                </video>
+              </figure>
+            </td>
+            <td>
+              <figure class="image">
+                <video autoplay loop muted controls>
+                  <source src="videos/0443_00073_01_00181_0_5.mp4" type="video/mp4">
+                </video>
+              </figure>
+            </td>
+          </tr>
         </tbody>
       </table>
     </div>
   </section>
 </body>
 </html>
-    
   <!-- results (videos) -->
             <div class="row mb-3">
                 <div class="col-md-12 mx-auto">
