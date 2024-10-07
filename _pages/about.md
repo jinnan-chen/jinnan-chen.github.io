@@ -24,7 +24,7 @@ Teaching
 Reviewer
 ------
 Computer Vision and Pattern Recognition Conference (CVPR)\
-Neural Information Processing Systems (NIPS)
+Neural Information Processing Systems (NIPS)\
 International Conference on Learning Representations (ICLR)
 
 Awards
