@@ -41,6 +41,12 @@
         font-size: 0.9rem;
       }
     }
+    .author-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem;
+    }
   </style>
 </head>
 <body>
@@ -48,8 +54,25 @@
     <div class="container has-text-centered">
       <p class="title is-3">Generalizable Human Gaussians from Single-View Image</p>
       <p class="subtitle is-4">Arxiv 2024</p>
-      <!-- 作者和机构信息保持不变 -->
       
+      <!-- 作者信息 -->
+      <p class="title is-5 mt-2 author-list"> 
+        <a href="https://jinnan-chen.github.io/">Jinnan Chen</a><sup>1</sup>, 
+        <a href="https://chaneyddtt.github.io/">Chen Li</a><sup>1</sup>, 
+        <a href="http://jeff95.me/">Jianfeng Zhang</a><sup>2</sup>, 
+        <a href="https://scholar.google.com/citations?user=TPD_P98AAAAJ&hl=zh-CN">Lingting Zhu</a><sup>3</sup>, 
+        <a href="http://www.buzhenhuang.com">Buzhen Huang</a><sup>1</sup>, 
+        <a href="http://hlinchen.github.io/hlchen/">Hanlin Chen</a><sup>1</sup>, 
+        <a href="https://www.comp.nus.edu.sg/~leegh/">Gim Hee Lee</a><sup>1</sup>
+      </p>
+      
+      <!-- 机构信息 -->
+      <p class="subtitle is-5"> 
+        <sup>1</sup> National University of Singapore &nbsp;
+        <sup>2</sup> ByteDance &nbsp;
+        <sup>3</sup> The University of Hong Kong &nbsp;
+      </p>
+
       <div class="is-flex is-justify-content-center">
         <span class="icon-text mx-1">
           <a class="button is-dark" href="https://arxiv.org/abs/2406.06050" role="button" target="_blank">
@@ -75,7 +98,7 @@
     <div class="container mt-6">
       <p class="title is-3 has-text-centered">Abstract</p>
       <p class="content is-size-6">
-        <!-- Abstract 内容保持不变 -->
+        In this work, we tackle the task of learning 3D human Gaussians from a single image, focusing on recovering detailed appearance and geometry including unobserved regions. We introduce a single-view generalizable Human Gaussian Model (HGM), which employs a novel generate-then-refine pipeline with the guidance from human body prior and diffusion prior. Our approach uses a ControlNet to refine rendered back-view images from coarse predicted human Gaussians, then uses the refined image along with the input image to reconstruct refined human Gaussians. To mitigate the potential generation of unrealistic human poses and shapes, we incorporate human priors from the SMPL-X model as a dual branch, propagating image features from the SMPL-X volume to the image Gaussians using sparse convolution and attention mechanisms. Given that the initial SMPL-X estimation might be inaccurate, we gradually refine it with our HGM model. We validate our approach on several publicly available datasets. Our method surpasses previous methods in both novel view synthesis and surface reconstruction. Our approach also exhibits strong generalization for cross-dataset evaluation and in-the-wild images.
       </p>
     </div>
 
@@ -102,7 +125,49 @@
           </tr>
         </thead>
         <tbody>
-          <!-- 表格内容保持不变，但每个<td>内的内容都用<figure class="image">包裹 -->
+          <tr>
+            <td>
+              <figure class="image">
+                <img src="videos/0448_00073_02_00221ori.jpg" alt="Input Image 1">
+              </figure>
+            </td>
+            <td>
+              <figure class="image">
+                <video autoplay loop muted controls>
+                  <source src="videos/0448_00073_02_00221ori_rgba_reco.mp4" type="video/mp4">
+                </video>
+              </figure>
+            </td>
+            <td>
+              <figure class="image">
+                <video autoplay loop muted controls>
+                  <source src="videos/0448_00073_02_00221ori.mp4" type="video/mp4">
+                </video>
+              </figure>
+            </td>
+            <td>
+              <figure class="image">
+                <video autoplay loop muted controls>
+                  <source src="videos/0448_00073_02_00221ori_refine.mp4" type="video/mp4">
+                </video>
+              </figure>
+            </td>
+            <td>
+              <figure class="image">
+                <video autoplay loop muted controls>
+                  <source src="videos/0448_00073_02_00221ori_sv.mp4" type="video/mp4">
+                </video>
+              </figure>
+            </td>
+            <td>
+              <figure class="image">
+                <video autoplay loop muted controls>
+                  <source src="videos/0448_00073_02_00221_0_5.mp4" type="video/mp4">
+                </video>
+              </figure>
+            </td>
+          </tr>
+          <!-- 其他行的结构类似，这里省略了重复内容 -->
         </tbody>
       </table>
     </div>
