@@ -5,7 +5,9 @@ permalink: /publications/
 author_profile: true
 ---
 
-
+* DiHuR: Diffusion-Guided Generalizable Human Reconstruction.
+  **Jinnan Chen**, Chen Li, Gim Hee Lee \
+  *IEEE/CVF Winter Conference (**WACV**)w 2025*
 
 * Generalizable Human Gaussians from Single-View Image. [[arXiv]](https://arxiv.org/abs/2406.06050)
 [[page]](https://jinnan-chen.github.io/projects/HGM/)\
