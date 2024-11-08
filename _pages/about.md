@@ -23,9 +23,7 @@ Teaching
 
 Reviewer
 ------
-Computer Vision and Pattern Recognition Conference (CVPR)\
-Neural Information Processing Systems (NIPS)\
-International Conference on Learning Representations (ICLR)
+CVPR 2024, 2025，AISTATS 2025, NIPS 2024, ICLR 2024
 
 Awards
 ------
