@@ -4,7 +4,6 @@ title: "Papers"
 permalink: /publications/
 author_profile: true
 ---
-
 * DiHuR: Diffusion-Guided Generalizable Human Reconstruction.\
   **Jinnan Chen**, Chen Li, Gim Hee Lee \
   *IEEE/CVF Winter Conference (**WACV**) 2025*
