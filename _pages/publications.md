@@ -4,6 +4,10 @@ title: "Papers"
 permalink: /publications/
 author_profile: true
 ---
+* Large Images are Gaussians: High-quality Large Image Representation with Levels of 2D Gaussian Splatting.\
+Lingting Zhu, Guying Lin, **Jinnan Chen**, Xinjie Zhang, Zhenchao Jin, Zhao Wang, Lequan Yu\
+Association for the Advancement of Artificial Intelligence(**AAAI**) 2025*
+
 * DiHuR: Diffusion-Guided Generalizable Human Reconstruction.\
   **Jinnan Chen**, Chen Li, Gim Hee Lee \
   *IEEE/CVF Winter Conference (**WACV**) 2025*
