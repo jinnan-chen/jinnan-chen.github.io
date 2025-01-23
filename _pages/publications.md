@@ -15,7 +15,7 @@ author_profile: true
 * Generalizable Human Gaussians from Single-View Image. [[arXiv]](https://arxiv.org/abs/2406.06050)
 [[page]](https://jinnan-chen.github.io/projects/HGM/)\
   **Jinnan Chen**, Chen Li, Jianfeng Zhang, Lingting Zhu, Buzhen Huang, Hanlin Chen, Gim Hee Lee \
-  *Arxiv 2024*
+*The International Conference on Learning Representations（**ICLR**）2025*
   
 * Weakly-supervised 3D Pose Transfer with Keypoints. [[arXiv]](https://arxiv.org/abs/2307.13459)
 [[page]](https://jinnan-chen.github.io/ws3dpt/) [[code]](https://github.com/jinnan-chen/3D-Pose-Transfer)\
