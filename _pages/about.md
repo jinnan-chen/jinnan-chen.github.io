@@ -23,7 +23,7 @@ Teaching
 
 Reviewer
 ------
-CVPR 2024, 2025, AISTATS 2025, NIPS 2024, ICLR 2025, ICML 2025
+CVPR, ICCV, NIPS, ICLR, ICML, AISTATS 
 
 Awards
 ------
