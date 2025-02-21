@@ -9,7 +9,7 @@ redirect_from:
 ---
 
 I'm currently a Ph.D. candidate at NUS School of Computing, supervised by Prof [Gim hee Lee](https://www.comp.nus.edu.sg/~leegh/). 
-I received my B.E. degree from Wuhan University and MEng degree from Nanyang Technology University with a GPA of 5.0/5.0. During my master's study, I was supervised by Prof [Jiang Xudong](https://personal.ntu.edu.sg/exdjiang/) and Dr [Qian Zheng](https://person.zju.edu.cn/zq). I interned at Bytedance AI Lab and Tencent Games.
+I received my B.E. degree from Wuhan University and MEng degree from Nanyang Technology University with a GPA of 5.0/5.0. During my master's study, I was supervised by Prof [Jiang Xudong](https://personal.ntu.edu.sg/exdjiang/) and Dr [Qian Zheng](https://person.zju.edu.cn/zq).
 
 
 Currently, my research interests are mainly in 3D computer vision, especially in 3D Assets Generation and
