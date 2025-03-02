@@ -15,8 +15,28 @@ I received my B.E. degree from Wuhan University and MEng degree from Nanyang Tec
 Currently, my research interests are mainly in 3D computer vision, especially in 3D Assets Generation and
  Human Digitization, including **Reconstruction** (Neural Fields & 3DGS), **Animation** (Skinning & Rigging), and **Generation** (Diffusion & AR).
 
+News
 
-Teaching
+<style> .news-container p { margin: 5px 0; /* 调整段落间距 */ line-height: 1.2; /* 调整行高 */ } .show-more-link { text-align: center; display: block; margin-top: 10px; } </style>
+🚀 [02.2025] two papers are
+ accepted in CVPR 2025(one first author)
+
+🚀 [01.2025] One paper is
+ accepted in ICLR 2025(first author)
+
+🚀 [12.2024] One paper is
+ accepted in AAAI 2025
+
+🚀 [10.2024] One paper is accpeted in WACV 2025(first author)
+
+🚀 [06.2023] One paper is accepted in ICCV 2023(first author)
+
+
+🚀 [02.2021] One paper is accepted in CVPR 2021
+
+
+🚀 [02.2020] One paper is accepted in CVPR 2020
+
 ------
 [2022] CS5340 Uncertainty Modelling in AI, National University of Singapore \
 [2022] CS5477 3D Computer Vision, National University of Singapore
