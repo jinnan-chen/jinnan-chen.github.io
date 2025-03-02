@@ -16,7 +16,6 @@ Currently, my research interests are mainly in 3D computer vision, especially in
  Human Digitization, including **Reconstruction** (Neural Fields & 3DGS), **Animation** (Skinning & Rigging), and **Generation** (Diffusion & AR).
 
 News
-
 <style> .news-container p { margin: 5px 0; /* 调整段落间距 */ line-height: 1.2; /* 调整行高 */ } .show-more-link { text-align: center; display: block; margin-top: 10px; } </style>
 
 🚀 [02.2025] two papers are
