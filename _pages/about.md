@@ -18,7 +18,7 @@ Currently, my research interests are mainly in 3D computer vision, especially in
 News
 <style> .news-container p { margin: 5px 0; /* 调整段落间距 */ line-height: 1.2; /* 调整行高 */ } .show-more-link { text-align: center; display: block; margin-top: 10px; } </style>
 
-🚀 [02.2025] two papers are
+🚀 [02.2025] Two papers are
  accepted in CVPR 2025(one first author)
 
 🚀 [01.2025] One paper is
