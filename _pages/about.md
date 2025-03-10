@@ -18,24 +18,24 @@ Currently, my research interests are mainly in 3D computer vision, especially in
 News
 ------
 
-🚀 [02.2025] Two papers are
+🎉 [02.2025] Two papers are
  accepted in CVPR 2025(one first author)
 
-🚀 [01.2025] One paper is
+🎉 [01.2025] One paper is
  accepted in ICLR 2025(first author)
 
-🚀 [12.2024] One paper is
+🎉 [12.2024] One paper is
  accepted in AAAI 2025
 
-🚀 [10.2024] One paper is accpeted in WACV 2025(first author)
+🎉 [10.2024] One paper is accpeted in WACV 2025(first author)
 
-🚀 [06.2023] One paper is accepted in ICCV 2023(first author)
-
-
-🚀 [02.2021] One paper is accepted in CVPR 2021
+🎉 [06.2023] One paper is accepted in ICCV 2023(first author)
 
 
-🚀 [02.2020] One paper is accepted in CVPR 2020
+🎉 [02.2021] One paper is accepted in CVPR 2021
+
+
+🎉 [02.2020] One paper is accepted in CVPR 2020
 
 ------
 [2022] CS5340 Uncertainty Modelling in AI, National University of Singapore \
