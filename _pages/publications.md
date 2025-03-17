@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "Publications"
+title: ""
 permalink: /publications/
 author_profile: true
 ---
@@ -18,7 +18,8 @@ author_profile: true
   **Jinnan Chen**, Chen Li, Jianfeng Zhang, Lingting Zhu, Buzhen Huang, Hanlin Chen, Gim Hee Lee \
 *The International Conference on Learning Representations（**ICLR**）2025*
 
-* Large Images are Gaussians: High-quality Large Image Representation with Levels of 2D Gaussian Splatting. [[arXiv]](https://arxiv.org/abs/2502.09039) [[code]](https://github.com/HKU-MedAI/LIG)\
+* Large Images are Gaussians: High-quality Large Image Representation with Levels of 2D Gaussian Splatting. \
+  [[arXiv]](https://arxiv.org/abs/2502.09039) [[code]](https://github.com/HKU-MedAI/LIG)\
  Lingting Zhu, Guying Lin, **Jinnan Chen**, Xinjie Zhang, Zhenchao Jin, Zhao Wang, Lequan Yu\
  *The Association for the Advancement of Artificial Intelligence (**AAAI**) 2025*
 
