@@ -1,9 +1,18 @@
 ---
 layout: archive
-title: "Papers"
+title: "Publications"
 permalink: /publications/
 author_profile: true
 ---
+* MAR-3D: Progressive Masked Auto-regressor for High-Resolution 3D Generation. \
+  **Jinnan Chen**, Lingting Zhu, Zeyu Hu, Shengju Qian, Yugang Chen, Xin Wang, Gim Hee Lee \
+*IEEE Conference on Computer Vision and Pattern Recognition（**CVPR**）2025*
+
+* Reconstructing Close Human Interaction with Appearance and Proxemics Reasoning. [[paper]](https://www.buzhenhuang.com/publications/papers/CVPR2025-CloseApp.pdf)
+  [[page]](https://www.buzhenhuang.com/works/CloseApp.html)\
+  Buzhen Huang, Chen Li, Chongyang Xu, Dongyue Lu, **Jinnan Chen**, Yangang Wang, Gim Hee Lee \
+*IEEE Conference on Computer Vision and Pattern Recognition（**CVPR**）2025*
+
 * Generalizable Human Gaussians from Single-View Image. [[arXiv]](https://arxiv.org/abs/2406.06050)
 [[page]](https://jinnan-chen.github.io/projects/HGM/)\
   **Jinnan Chen**, Chen Li, Jianfeng Zhang, Lingting Zhu, Buzhen Huang, Hanlin Chen, Gim Hee Lee \
