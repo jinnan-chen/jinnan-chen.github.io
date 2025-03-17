@@ -18,11 +18,11 @@ author_profile: true
   **Jinnan Chen**, Chen Li, Jianfeng Zhang, Lingting Zhu, Buzhen Huang, Hanlin Chen, Gim Hee Lee \
 *The International Conference on Learning Representations（**ICLR**）2025*
 
-* Large Images are Gaussians: High-quality Large Image Representation with Levels of 2D Gaussian Splatting.\
+* Large Images are Gaussians: High-quality Large Image Representation with Levels of 2D Gaussian Splatting. [[arXiv]](https://arxiv.org/abs/2502.09039) [[code]](https://github.com/HKU-MedAI/LIG)\
  Lingting Zhu, Guying Lin, **Jinnan Chen**, Xinjie Zhang, Zhenchao Jin, Zhao Wang, Lequan Yu\
  *The Association for the Advancement of Artificial Intelligence (**AAAI**) 2025*
 
-* DiHuR: Diffusion-Guided Generalizable Human Reconstruction.\
+* DiHuR: Diffusion-Guided Generalizable Human Reconstruction. [[arXiv]](https://arxiv.org/abs/2411.11903)\
   **Jinnan Chen**, Chen Li, Gim Hee Lee \
   *IEEE/CVF Winter Conference (**WACV**) 2025*
   
