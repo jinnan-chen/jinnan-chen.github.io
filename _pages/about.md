@@ -19,17 +19,17 @@ News
 ------
 
 🎉 [02.2025] Two papers are
- accepted in CVPR 2025(one first author)
+ accepted in CVPR 2025
 
 🎉 [01.2025] One paper is
- accepted in ICLR 2025(first author)
+ accepted in ICLR 2025
 
 🎉 [12.2024] One paper is
  accepted in AAAI 2025
 
-🎉 [10.2024] One paper is accpeted in WACV 2025(first author)
+🎉 [10.2024] One paper is accpeted in WACV 2025
 
-🎉 [06.2023] One paper is accepted in ICCV 2023(first author)
+🎉 [06.2023] One paper is accepted in ICCV 2023
 
 
 🎉 [02.2021] One paper is accepted in CVPR 2021
