@@ -29,12 +29,27 @@
       text-align: center;
     }
 
-    .method-image, .teaser-image {
-      max-width: 1500px;
-      width: 100%;
+    /* Modified widths for teaser, abstract, and method */
+    .teaser-image {
+      max-width: 1000px; /* Reduced from 1500px to about 2/3 */
+      width: 66.67%; /* Explicitly set to 2/3 width */
       height: auto;
       margin: 2rem auto;
       display: block;
+    }
+
+    .method-image {
+      max-width: 1000px; /* Reduced from 1500px to about 2/3 */
+      width: 66.67%; /* Explicitly set to 2/3 width */
+      height: auto;
+      margin: 2rem auto;
+      display: block;
+    }
+
+    .abstract-content {
+      max-width: 800px; /* Reduced width for abstract */
+      margin: 0 auto;
+      text-align: justify;
     }
 
     .video-grid {
@@ -78,7 +93,7 @@
     }
 
     /* Center alignment specific styles */
-    .title, .subtitle, .author-list, .abstract {
+    .title, .subtitle, .author-list {
       text-align: center;
       max-width: 1200px;
       margin-left: auto;
@@ -179,9 +194,11 @@
         <img src="img/teaser4.png" class="teaser-image" alt="Teaser image">
 
         <h2 class="title is-3">Abstract</h2>
-        <p class="is-size-6">
-          In this work, we tackle the task of learning 3D human Gaussians from a single image, focusing on recovering detailed appearance and geometry including unobserved regions. We introduce a single-view generalizable Human Gaussian Model (HGM), which employs a novel generate-then-refine pipeline with the guidance from human body prior and diffusion prior. Our approach uses a ControlNet to refine rendered back-view images from coarse predicted human Gaussians, then uses the refined image along with the input image to reconstruct refined human Gaussians. To mitigate the potential generation of unrealistic human poses and shapes, we incorporate human priors from the SMPL-X model as a dual branch, propagating image features from the SMPL-X volume to the image Gaussians using sparse convolution and attention mechanisms. Given that the initial SMPL-X estimation might be inaccurate, we gradually refine it with our HGM model. We validate our approach on several publicly available datasets. Our method surpasses previous methods in both novel view synthesis and surface reconstruction. Our approach also exhibits strong generalization for cross-dataset evaluation and in-the-wild images.
-        </p>
+        <div class="abstract-content">
+          <p class="is-size-6">
+            In this work, we tackle the task of learning 3D human Gaussians from a single image, focusing on recovering detailed appearance and geometry including unobserved regions. We introduce a single-view generalizable Human Gaussian Model (HGM), which employs a novel generate-then-refine pipeline with the guidance from human body prior and diffusion prior. Our approach uses a ControlNet to refine rendered back-view images from coarse predicted human Gaussians, then uses the refined image along with the input image to reconstruct refined human Gaussians. To mitigate the potential generation of unrealistic human poses and shapes, we incorporate human priors from the SMPL-X model as a dual branch, propagating image features from the SMPL-X volume to the image Gaussians using sparse convolution and attention mechanisms. Given that the initial SMPL-X estimation might be inaccurate, we gradually refine it with our HGM model. We validate our approach on several publicly available datasets. Our method surpasses previous methods in both novel view synthesis and surface reconstruction. Our approach also exhibits strong generalization for cross-dataset evaluation and in-the-wild images.
+          </p>
+        </div>
 
         <h2 class="title is-3">Method</h2>
         <img src="img/framework.png" class="method-image" alt="Method framework">
