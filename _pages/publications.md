@@ -6,7 +6,7 @@ author_profile: true
 ---
 * MuMA: 3D PBR Texturing via Multi-Channel Multi-View Generation and Agentic Post-Processing. [[arXiv]](https://arxiv.org/abs/2503.18461)\
   Lingting Zhu, Jingrui Ye, Runze Zhang, Zeyu Hu, Yingda Yin, Lanjiong Li, **Jinnan Chen**, Shengju Qian, Xin Wang, Qingmin Liao, Lequan Yu\
-  *Arxiv 2020*
+  *Arxiv 2025*
 
 * MAR-3D: Progressive Masked Auto-regressor for High-Resolution 3D Generation. [[arXiv]](https://arxiv.org/abs/2503.20519)\
   **Jinnan Chen**, Lingting Zhu, Zeyu Hu, Shengju Qian, Yugang Chen, Xin Wang, Gim Hee Lee \
