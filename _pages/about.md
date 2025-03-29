@@ -16,7 +16,7 @@ I received my B.E. degree from Wuhan University and MEng degree from Nanyang Tec
 
 Currently, my research interests are mainly in 3D computer vision, especially in 3D Assets Generation and Human Digitization, including **Reconstruction** (Neural Fields & 3DGS), **Animation** (Skinning & Rigging), and **Generation** (Diffusion & AR).
 
-<span style="color:red">I'm on the job market and looking for a Research Scientist/Engineer position starting in the summer of 2025. Feel free to reach out if you have any openings!</span>
+<span style="color:red">I'm on the job market and looking for a Research Scientist/Engineer position. Feel free to reach out if you have any openings!</span>
 
 ## News
 
