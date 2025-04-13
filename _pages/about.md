@@ -19,7 +19,7 @@ Currently, my research interests are mainly in 3D computer vision, especially in
 <span style="color:red">I'm on the job market and looking for a Research Scientist/Engineer position. Feel free to reach out if you have any openings!</span>
 
 ## News
-- 🎉 [04.2025] Our MAR-3D is selected as **Highlight** in CVPR 2025 (Top 13.5% of the accepted papers)
+- 🎉 [04.2025] Our MAR-3D is selected as **Highlight** in CVPR 2025 (Top 13.5% of accepted papers)
 - 🎉 [02.2025] Two papers are accepted in CVPR 2025
 - 🎉 [01.2025] One paper is accepted in ICLR 2025
 - 🎉 [12.2024] One paper is accepted in AAAI 2025
