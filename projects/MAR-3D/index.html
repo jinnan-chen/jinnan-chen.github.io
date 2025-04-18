@@ -15,6 +15,8 @@
             --spacing-sm: 10px;
             --spacing-md: 20px;
             --spacing-lg: 40px;
+            --button-primary-color: #4285f4;
+            --button-secondary-color: #333333;
         }
         
         * {
@@ -64,6 +66,12 @@
         
         a:hover {
             text-decoration: underline;
+        }
+        
+        .button:hover {
+            text-decoration: none;
+            opacity: 0.9;
+            transform: translateY(-2px);
         }
         
         section {
@@ -144,6 +152,11 @@
         <header class="text-center title">
             <h1>MAR-3D: Progressive Masked Auto-regressor for High-Resolution 3D Generation</h1>
             <p class="highlight" style="color: #ff8c00; font-weight: bold; font-size: 20px; margin-top: 10px;">CVPR 2025 Highlight</p>
+            
+            <div class="paper-links" style="margin-top: 20px;">
+                <a href="https://arxiv.org/abs/2503.20519" class="button" style="display: inline-block; padding: 8px 20px; margin: 0 10px; background-color: var(--button-primary-color); color: white; border-radius: 4px; font-weight: bold; text-decoration: none; transition: background-color 0.3s ease;">arXiv</a>
+                <a href="https://github.com/jinnan-chen/MAR3D" class="button" style="display: inline-block; padding: 8px 20px; margin: 0 10px; background-color: var(--button-secondary-color); color: white; border-radius: 4px; font-weight: bold; text-decoration: none; transition: background-color 0.3s ease;">Code</a>
+            </div>
             
             <div class="author-list">
                 <p class="author-names">
