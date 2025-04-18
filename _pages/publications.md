@@ -8,7 +8,7 @@ author_profile: true
   Lingting Zhu, Jingrui Ye, Runze Zhang, Zeyu Hu, Yingda Yin, Lanjiong Li, **Jinnan Chen**, Shengju Qian, Xin Wang, Qingmin Liao, Lequan Yu\
   *Arxiv 2025*
 
-* MAR-3D: Progressive Masked Auto-regressor for High-Resolution 3D Generation. [[arXiv]](https://arxiv.org/abs/2503.20519)\
+* MAR-3D: Progressive Masked Auto-regressor for High-Resolution 3D Generation. [[arXiv]](https://arxiv.org/abs/2503.20519) [[page]](https://jinnan-chen.github.io/projects/MAR-3D/)\
   **Jinnan Chen**, Lingting Zhu, Zeyu Hu, Shengju Qian, Yugang Chen, Xin Wang, Gim Hee Lee \
 *IEEE Conference on Computer Vision and Pattern Recognition（**CVPR**）2025*
 
