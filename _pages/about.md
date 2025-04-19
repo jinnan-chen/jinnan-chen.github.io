@@ -262,7 +262,13 @@ body {
   
   <h2 class="section-header">Reviewer</h2>
   <div class="reviewer-list" style="margin-left: 20px;">
-    <p>CVPR 2024, 2025, ICCV 2025, NeurIPS 2024, 2025, ICLR 2025, ICML 2025, AISTATS 2025</p>
+    <p>VF Conference on Computer Vision and Pattern Recognition (CVPR) 2024,2025
+          IEEE/CVF International Conference on Computer Vision (ICCV) 2025
+          International Conference on Machine Learning (ICML) 2025
+          Conference on Neural Information Processing Systems (NeurIPS) 2024,2025
+          International Conference on Learning Representations (ICLR) 2025
+          International Conference on Artificial Intelligence and Statistics (AISTATS) 2025
+    </p>
   </div>
   
   <h2 class="section-header">Awards</h2>
