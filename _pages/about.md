@@ -221,7 +221,7 @@ redirect_from:
   
   <h2 class="section-header">Reviewer</h2>
   <div class="reviewer-list" style="margin-left: 20px;">
-    <p>CVPR, ICCV, NIPS, ICLR, ICML, AISTATS</p>
+    <p>CVPR 2024,2025, ICCV 2025, NeurIPS 2024, 2025, ICLR 2025, ICML 2025, AISTATS 2025</p>
   </div>
   
   <h2 class="section-header">Awards</h2>
