@@ -6,7 +6,7 @@ subtitle: # <a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
 
 profile:
   align: right
-  image: pprofile.png
+  image: profile.png
   image_cicular: false # crops the image to make it circular
   address: # >
     # <p>555 your office number</p>
@@ -29,7 +29,7 @@ body {
 }
 
 .max-width-container {
-  max-width: 800px;
+  max-width: 3000px;
   margin: 0 auto; 
   padding: 0 20px;
 }
@@ -260,17 +260,17 @@ body {
     </ul>
   </div>
   
-<h2 class="section-header">Academic Services (Reviewer)</h2>
-<div class="reviewer-list" style="margin-left: 20px;">
-  <ul>
-    <li>Conference on Computer Vision and Pattern Recognition (CVPR) 2024, 2025</li>
-    <li>IEEE/CVF International Conference on Computer Vision (ICCV) 2025</li>
-    <li>International Conference on Machine Learning (ICML) 2025</li>
-    <li>Conference on Neural Information Processing Systems (NeurIPS) 2024, 2025</li>
-    <li>International Conference on Learning Representations (ICLR) 2025</li>
-    <li>International Conference on Artificial Intelligence and Statistics (AISTATS) 2025</li>
-  </ul>
-</div>
+  <h2 class="section-header">Academic Services (Reviewer)</h2>
+  <div class="reviewer-list" style="margin-left: 20px;">
+    <ul>
+      <li>Conference on Computer Vision and Pattern Recognition (CVPR) 2024, 2025</li>
+      <li>IEEE/CVF International Conference on Computer Vision (ICCV) 2025</li>
+      <li>International Conference on Machine Learning (ICML) 2025</li>
+      <li>Conference on Neural Information Processing Systems (NeurIPS) 2024, 2025</li>
+      <li>International Conference on Learning Representations (ICLR) 2025</li>
+      <li>International Conference on Artificial Intelligence and Statistics (AISTATS) 2025</li>
+    </ul>
+  </div>
   
   <h2 class="section-header">Awards</h2>
   <div class="awards-list">
