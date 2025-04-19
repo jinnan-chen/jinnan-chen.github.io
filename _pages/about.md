@@ -9,8 +9,13 @@ redirect_from:
 ---
 
 <style>
+body {
+  margin: 0;
+  padding: 0;
+}
+
 .max-width-container {
-  max-width: 1600px; /* Increased from 1400px */
+  max-width: 1600px;
   margin: 0 auto; 
   padding: 0 20px;
 }
@@ -18,12 +23,12 @@ redirect_from:
 .publication-item {
   display: flex;
   margin-bottom: 30px;
-  align-items: center; /* Changed from flex-start to center for vertical alignment */
+  align-items: center;
 }
 
 .publication-image {
-  flex: 0 0 280px; /* Increased from 240px for wider images */
-  margin-right: 30px; /* Increased from 25px */
+  flex: 0 0 280px;
+  margin-right: 30px;
 }
 
 .publication-image img, 
@@ -57,6 +62,11 @@ redirect_from:
 
 .news-list, .awards-list, .teaching-list {
   margin-left: 20px;
+}
+
+/* Hide the page title if it's duplicating the author name */
+.page__title {
+  display: none;
 }
 </style>
 
