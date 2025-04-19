@@ -173,7 +173,7 @@ redirect_from:
 
   <div class="publication-item">
     <div class="publication-image">
-      <img src="/images/teaser_absorption.jpg" alt="Absorption Teaser">
+      <img src="/images/teaser_absorption.png" alt="Absorption Teaser">
     </div>
     <div class="publication-content">
       <strong>Single image reflection removal with absorption effect.</strong> <a href="https://openaccess.thecvf.com/content/CVPR2021/html/Zheng_Single_Image_Reflection_Removal_With_Absorption_Effect_CVPR_2021_paper.html">[paper]</a> <a href="https://github.com/q-zh/absorption">[code]</a><br>
@@ -184,7 +184,7 @@ redirect_from:
 
   <div class="publication-item">
     <div class="publication-image">
-      <img src="/images/teaser_distillation.jpg" alt="Feature Distillation Teaser">
+      <img src="/images/teaser_distillation.png" alt="Feature Distillation Teaser">
     </div>
     <div class="publication-content">
       <strong>Feature distillation with guided adversarial contrastive learning.</strong> <a href="https://arxiv.org/abs/2009.09922">[arXiv]</a><br>
@@ -195,7 +195,7 @@ redirect_from:
 
   <div class="publication-item">
     <div class="publication-image">
-      <img src="/images/teaser_glass.jpg" alt="Glass Calibration Teaser">
+      <img src="/images/teaser_glass.png" alt="Glass Calibration Teaser">
     </div>
     <div class="publication-content">
       <strong>What does plate glass reveal about camera calibration?</strong> <a href="https://openaccess.thecvf.com/content_CVPR_2020/html/Zheng_What_Does_Plate_Glass_Reveal_About_Camera_Calibration_CVPR_2020_paper.html">[paper]</a> <a href="https://github.com/q-zh/GlassCalibration">[code]</a><br>
