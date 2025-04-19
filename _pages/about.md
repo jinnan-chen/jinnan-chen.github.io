@@ -147,7 +147,7 @@ redirect_from:
 
   <div class="publication-item">
     <div class="publication-image">
-      <img src="/images/teaser_lig.jpg" alt="LIG Teaser">
+      <img src="/images/teaser_lig.png" alt="LIG Teaser">
     </div>
     <div class="publication-content">
       <strong>Large Images are Gaussians: High-quality Large Image Representation with Levels of 2D Gaussian Splatting.</strong> <a href="https://arxiv.org/abs/2502.09039">[arXiv]</a> <a href="https://github.com/HKU-MedAI/LIG">[code]</a><br>
