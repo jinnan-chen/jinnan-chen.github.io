@@ -10,7 +10,7 @@ redirect_from:
 
 <style>
 .max-width-container {
-  max-width: 1400px; 
+  max-width: 1600px; /* Increased from 1400px */
   margin: 0 auto; 
   padding: 0 20px;
 }
@@ -18,12 +18,12 @@ redirect_from:
 .publication-item {
   display: flex;
   margin-bottom: 30px;
-  align-items: flex-start;
+  align-items: center; /* Changed from flex-start to center for vertical alignment */
 }
 
 .publication-image {
-  flex: 0 0 240px;
-  margin-right: 25px;
+  flex: 0 0 280px; /* Increased from 240px for wider images */
+  margin-right: 30px; /* Increased from 25px */
 }
 
 .publication-image img, 
@@ -49,8 +49,6 @@ redirect_from:
   }
 }
 
-/* Job alert styling removed */
-
 .section-header {
   margin-top: 40px;
   border-bottom: 1px solid #eee;
@@ -69,8 +67,6 @@ redirect_from:
     I received my B.E. degree from Wuhan University and MEng degree from Nanyang Technology University with a GPA of 5.0/5.0. During my master's study, I was supervised by Prof <a href="https://personal.ntu.edu.sg/exdjiang/">Jiang Xudong</a> and Dr <a href="https://person.zju.edu.cn/zq">Qian Zheng</a>.
     Currently, my research interests are mainly in 3D computer vision, especially in 3D Assets Generation and Human Digitization, including <strong>Reconstruction</strong> (Neural Fields & 3DGS), <strong>Animation</strong> (Skinning & Rigging), and <strong>Generation</strong> (Diffusion & AR).
   </p>
-  
-  <!-- Job alert removed -->
   
   <h2 class="section-header">News</h2>
   <div class="news-list">
