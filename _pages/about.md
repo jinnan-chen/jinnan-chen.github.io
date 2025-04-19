@@ -115,7 +115,10 @@ redirect_from:
 
   <div class="publication-item">
     <div class="publication-image">
-      <img src="/images/teaser_closeapp.jpg" alt="CloseApp Teaser">
+      <video width="100%" autoplay loop muted playsinline>
+        <source src="/videos/close.mov" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
     </div>
     <div class="publication-content">
       <strong>Reconstructing Close Human Interaction with Appearance and Proxemics Reasoning.</strong> <a href="https://www.buzhenhuang.com/publications/papers/CVPR2025-CloseApp.pdf">[paper]</a> <a href="https://www.buzhenhuang.com/works/CloseApp.html">[page]</a><br>
