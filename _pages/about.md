@@ -260,16 +260,17 @@ body {
     </ul>
   </div>
   
-  <h2 class="section-header">Reviewer</h2>
-  <div class="reviewer-list" style="margin-left: 20px;">
-    <p>VF Conference on Computer Vision and Pattern Recognition (CVPR) 2024,2025
-          IEEE/CVF International Conference on Computer Vision (ICCV) 2025
-          International Conference on Machine Learning (ICML) 2025
-          Conference on Neural Information Processing Systems (NeurIPS) 2024,2025
-          International Conference on Learning Representations (ICLR) 2025
-          International Conference on Artificial Intelligence and Statistics (AISTATS) 2025
-    </p>
-  </div>
+<h2 class="section-header">Academic Services (Reviewer)</h2>
+<div class="reviewer-list" style="margin-left: 20px;">
+  <ul>
+    <li>Conference on Computer Vision and Pattern Recognition (CVPR) 2024, 2025</li>
+    <li>IEEE/CVF International Conference on Computer Vision (ICCV) 2025</li>
+    <li>International Conference on Machine Learning (ICML) 2025</li>
+    <li>Conference on Neural Information Processing Systems (NeurIPS) 2024, 2025</li>
+    <li>International Conference on Learning Representations (ICLR) 2025</li>
+    <li>International Conference on Artificial Intelligence and Statistics (AISTATS) 2025</li>
+  </ul>
+</div>
   
   <h2 class="section-header">Awards</h2>
   <div class="awards-list">
