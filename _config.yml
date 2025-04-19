@@ -19,7 +19,7 @@ footer_text: >
 keywords: 3D vision, Computer Vision, AI  # add your own keywords or leave empty
 
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
-icon:  # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
+icon: # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
 url: https://jinnan-chen.github.io # the base hostname & protocol for your site
 baseurl: # the subpath of your site, e.g. /blog/
@@ -55,7 +55,7 @@ footer_fixed: true
 navbar_enabled: true
 
 # Dimensions
-max_width: 800px
+max_width: 900px  # Changed from 800px to match the custom max-width in about.md
 
 # TODO: add layout settings (single page vs. multi-page)
 
@@ -65,7 +65,7 @@ max_width: 800px
 # Display links to the page with a preview object on social media.
 serve_og_meta: true # Include Open Graph meta tags in the HTML head
 serve_schema_org: true # Include Schema.org in the HTML head
-og_image: profile.png # The site-wide (default for all links) Open Graph preview image
+og_image: /assets/img/profile.png # Fixed path to profile image
 
 # -----------------------------------------------------------------------------
 # Social integration
@@ -88,8 +88,8 @@ wikidata_id: # your wikidata id
 dblp_url: # your DBLP profile url
 stackoverflow_id: #your stackoverflow id
 
-contact_note: # >
-  # You can even add a little note about which of these is the best way to reach you.
+contact_note: >
+  Feel free to reach out via email at jinnancv@gmail.com
 
 # -----------------------------------------------------------------------------
 # Analytics and search engine verification
@@ -264,13 +264,14 @@ max_author_limit: 4
 # -----------------------------------------------------------------------------
 
 imagemagick:
-  enabled: false # enables responsive images for your site (recomended, see https://github.com/alshedivat/al-folio/issues/537)
+  enabled: true # enabled responsive images for your site (modified from false)
   widths:
     - 480
     - 800
     - 1400
   input_directories:
-    - /
+    - assets/img/
+    - images/
   input_formats:
     - ".jpg"
     - ".jpeg"
