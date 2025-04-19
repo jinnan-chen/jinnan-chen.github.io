@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jinnan Chen - 个人学术网站</title>
+  <title>Jinnan Chen - Academic Profile</title>
   <style>
     body {
       margin: 0;
@@ -11,6 +11,7 @@
       font-family: Arial, sans-serif;
       line-height: 1.6;
       color: #333;
+      background-color: #f8f9fa;
     }
 
     .main-container {
@@ -19,10 +20,12 @@
       max-width: 1200px;
       margin: 0 auto;
       padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
 
     .profile-container {
-      flex: 0 0 30%;
+      flex: 0 0 25%;
       padding: 20px;
       background-color: #f8f9fa;
       border-radius: 5px;
@@ -46,6 +49,7 @@
     .content-container {
       flex: 1;
       min-width: 60%;
+      padding-top: 20px;
     }
 
     .max-width-container {
@@ -121,52 +125,33 @@
       margin-left: 20px;
     }
 
-    /* 确保社交图标可见 */
-    .social {
-      display: block !important;
-      margin-top: 30px;
-    }
-
+    /* Social media icons */
     .social-icons {
-      display: flex !important;
-      justify-content: center;
+      display: flex;
+      flex-direction: column;
       margin-top: 20px;
     }
 
     .social-icons a {
-      margin: 0 10px;
-      font-size: 1.5rem;
-    }
-
-    .contact-note {
-      display: block !important;
-      text-align: center;
-      margin-top: 10px;
-    }
-    
-    /* 添加导航栏 */
-    .navbar {
-      background-color: #333;
-      overflow: hidden;
       display: flex;
-      justify-content: center;
-    }
-
-    .navbar a {
-      float: left;
-      display: block;
-      color: white;
-      text-align: center;
-      padding: 14px 16px;
+      align-items: center;
+      margin-bottom: 10px;
       text-decoration: none;
+      color: #333;
+      transition: color 0.3s ease;
     }
 
-    .navbar a:hover {
-      background-color: #ddd;
-      color: black;
+    .social-icons a:hover {
+      color: #0366d6;
+    }
+
+    .social-icons i {
+      width: 20px;
+      margin-right: 10px;
+      font-size: 1.2rem;
     }
     
-    /* 强调求职信息 */
+    /* Job market highlight */
     .job-market {
       background-color: #fff3e0;
       padding: 15px;
@@ -175,42 +160,44 @@
       border-left: 5px solid orange;
     }
   </style>
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <!-- 导航栏 -->
-  <div class="navbar">
-    <a href="#about">关于我</a>
-    <a href="#news">最新消息</a>
-    <a href="#publications">发表作品</a>
-    <a href="#teaching">教学经历</a>
-    <a href="#service">学术服务</a>
-    <a href="#awards">获奖情况</a>
-  </div>
-
   <div class="main-container">
-    <!-- 个人资料部分 -->
+    <!-- Profile Section -->
     <div class="profile-container">
-      <img src="profile.png" alt="Jinnan Chen 个人照片" class="profile-image">
+      <img src="profile.png" alt="Jinnan Chen Profile" class="profile-image">
       <div class="profile-address">
         <p>School of Computing</p>
         <p>National University of Singapore</p>
         <p>Singapore</p>
       </div>
       
-      <!-- 社交媒体图标可以在这里添加 -->
+      <!-- Social Media Links -->
       <div class="social-icons">
-        <!-- 示例：添加更多社交媒体图标 -->
-        <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
-        <a href="#" title="Google Scholar"><i class="fab fa-google"></i></a>
-        <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-        <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="mailto:your.email@example.com" title="Email">
+          <i class="fas fa-envelope"></i> Email
+        </a>
+        <a href="https://www.linkedin.com/in/yourprofile" title="LinkedIn">
+          <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+        <a href="https://twitter.com/yourhandle" title="X (Twitter)">
+          <i class="fab fa-x-twitter"></i> X (Twitter)
+        </a>
+        <a href="https://scholar.google.com/citations?user=yourid" title="Google Scholar">
+          <i class="fas fa-graduation-cap"></i> Google Scholar
+        </a>
+        <a href="https://github.com/yourusername" title="GitHub">
+          <i class="fab fa-github"></i> GitHub
+        </a>
       </div>
     </div>
 
-    <!-- 内容部分 -->
+    <!-- Content Section -->
     <div class="content-container">
       <div class="max-width-container">
-        <h2 class="section-header" id="about">关于我</h2>
+        <h2 class="section-header" id="about">About Me</h2>
         <p>
           I'm currently a Ph.D. candidate at NUS School of Computing, supervised by Prof <a href="https://www.comp.nus.edu.sg/~leegh/">Gim Hee Lee</a>. 
           I received my B.E. degree from Wuhan University and MEng degree from Nanyang Technology University with a GPA of 5.0/5.0. During my master's study, I was supervised by Prof <a href="https://personal.ntu.edu.sg/exdjiang/">Jiang Xudong</a> and Dr <a href="https://person.zju.edu.cn/zq">Qian Zheng</a>.
@@ -223,7 +210,7 @@
           <span style="font-weight: bold;">I'm on the job market and looking for a Research Scientist/Engineer position starting in the 2025 Fall. Feel free to reach out if you have any openings!</span>
         </div>
         
-        <h2 class="section-header" id="news">最新消息</h2>
+        <h2 class="section-header" id="news">News</h2>
         <div class="news-list">
           <ul>
             <li><strong>🎉 [04.2025]</strong> Our MAR-3D is selected as <strong>Highlight</strong> in CVPR 2025 (Top 13.5% of accepted papers)</li>
@@ -237,7 +224,7 @@
           </ul>
         </div>
         
-        <h2 class="section-header" id="publications">发表作品</h2>
+        <h2 class="section-header" id="publications">Publications</h2>
 
         <article class="publication-item">
           <div class="publication-image">
@@ -254,7 +241,7 @@
           <div class="publication-image">
             <video width="100%" autoplay loop muted playsinline>
               <source src="videos/mar-3d.mov" type="video/mp4">
-              您的浏览器不支持视频标签。
+              Your browser does not support the video tag.
             </video>
           </div>
           <div class="publication-content">
@@ -268,7 +255,7 @@
           <div class="publication-image">
             <video width="100%" autoplay loop muted playsinline>
               <source src="videos/close.mp4" type="video/mp4">
-              您的浏览器不支持视频标签。
+              Your browser does not support the video tag.
             </video>
           </div>
           <div class="publication-content">
@@ -282,7 +269,7 @@
           <div class="publication-image">
             <video width="100%" autoplay loop muted playsinline>
               <source src="videos/hgm.mov" type="video/mp4">
-              您的浏览器不支持视频标签。
+              Your browser does not support the video tag.
             </video>
           </div>
           <div class="publication-content">
@@ -307,7 +294,7 @@
           <div class="publication-image">
             <video width="100%" autoplay loop muted playsinline>
               <source src="videos/dihur.mov" type="video/mp4">
-              您的浏览器不支持视频标签。
+              Your browser does not support the video tag.
             </video>
           </div>
           <div class="publication-content">
@@ -361,7 +348,7 @@
           </div>
         </article>
         
-        <h2 class="section-header" id="teaching">教学经历</h2>
+        <h2 class="section-header" id="teaching">Teaching</h2>
         <div class="teaching-list">
           <ul>
             <li><strong>[2022]</strong> CS5340 Uncertainty Modelling in AI, National University of Singapore</li>
@@ -369,7 +356,7 @@
           </ul>
         </div>
         
-        <h2 class="section-header" id="service">学术服务（审稿人）</h2>
+        <h2 class="section-header" id="service">Academic Services (Reviewer)</h2>
         <div class="reviewer-list">
           <ul>
             <li>Conference on Computer Vision and Pattern Recognition (CVPR) 2024, 2025</li>
@@ -381,7 +368,7 @@
           </ul>
         </div>
         
-        <h2 class="section-header" id="awards">获奖情况</h2>
+        <h2 class="section-header" id="awards">Awards</h2>
         <div class="awards-list">
           <ul>
             <li>Wuhan University Excellent Student</li>
@@ -392,8 +379,5 @@
       </div>
     </div>
   </div>
-
-  <!-- 如果需要添加字体图标支持，可以添加 Font Awesome -->
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </body>
 </html>
