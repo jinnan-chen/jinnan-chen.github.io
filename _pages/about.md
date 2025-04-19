@@ -169,7 +169,7 @@ body {
       <source src="/videos/dihur.mov" type="video/mp4">
       Your browser does not support the video tag.
     </video>
-  </div><!-- This closing div was missing -->
+  </div>
   <div class="publication-content">
     <strong>DiHuR: Diffusion-Guided Generalizable Human Reconstruction.</strong> <a href="https://arxiv.org/abs/2411.11903">[arXiv]</a><br>
     <strong>Jinnan Chen</strong>, Chen Li, Gim Hee Lee<br>
@@ -234,12 +234,12 @@ body {
     <p>CVPR 2024,2025, ICCV 2025, NeurIPS 2024, 2025, ICLR 2025, ICML 2025, AISTATS 2025</p>
   </div>
   
-  <h2 class="section-header">Awards</h2>
-  <div class="awards-list">
-    <ul>
-      <li>Wuhan University Excellent Student</li>
-      <li>NUS Research Scholarship</li>
-      <li>NUS Research Achievement</li>
-    </ul>
-  </div>
+<h2 class="section-header">Awards</h2>
+<div class="awards-list">
+  <ul>
+    <li>Wuhan University Excellent Student</li>
+    <li>NUS Research Scholarship</li>
+    <li>NUS Research Achievement</li>
+  </ul>
+</div>
 </div>
