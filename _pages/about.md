@@ -263,7 +263,7 @@ body {
   <h2 class="section-header">Academic Services (Reviewer)</h2>
   <div class="reviewer-list" style="margin-left: 20px;">
     <ul>
-      <li>Conference on Computer Vision and Pattern Recognition (CVPR) 2024, 2025</li>
+      <li>IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) 2024, 2025</li>
       <li>IEEE/CVF International Conference on Computer Vision (ICCV) 2025</li>
       <li>International Conference on Machine Learning (ICML) 2025</li>
       <li>Conference on Neural Information Processing Systems (NeurIPS) 2024, 2025</li>
