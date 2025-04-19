@@ -65,7 +65,7 @@ max_width: 900px  # Changed from 800px to match the custom max-width in about.md
 # Display links to the page with a preview object on social media.
 serve_og_meta: true # Include Open Graph meta tags in the HTML head
 serve_schema_org: true # Include Schema.org in the HTML head
-og_image: /assets/img/profile.png # Fixed path to profile image
+og_image: profile.png # The site-wide Open Graph preview image
 
 # -----------------------------------------------------------------------------
 # Social integration
@@ -270,8 +270,8 @@ imagemagick:
     - 800
     - 1400
   input_directories:
-    - assets/img/
-    - images/
+    - assets/img
+    - images
   input_formats:
     - ".jpg"
     - ".jpeg"
