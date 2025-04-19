@@ -10,7 +10,7 @@ redirect_from:
 
 <style>
 .max-width-container {
-  max-width: 1200px; 
+  max-width: 1400px; 
   margin: 0 auto; 
   padding: 0 20px;
 }
@@ -22,8 +22,8 @@ redirect_from:
 }
 
 .publication-image {
-  flex: 0 0 180px;
-  margin-right: 20px;
+  flex: 0 0 240px;
+  margin-right: 25px;
 }
 
 .publication-image img, 
