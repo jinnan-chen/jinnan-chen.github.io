@@ -6,7 +6,7 @@ subtitle: # <a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
 
 profile:
   align: right
-  image: profile.png
+  image: profile.png # Fixed image path without leading slash
   image_circular: false # crops the image to make it circular
   address: >
     <p>School of Computing</p>
@@ -91,6 +91,29 @@ body {
 /* Hide the page title if it's duplicating the author name */
 .page__title {
   display: none;
+}
+
+/* Ensure social icons are visible */
+.social {
+  display: block !important;
+  margin-top: 30px;
+}
+
+.social-icons {
+  display: flex !important;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  font-size: 1.5rem;
+}
+
+.contact-note {
+  display: block !important;
+  text-align: center;
+  margin-top: 10px;
 }
 </style>
 
