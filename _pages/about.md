@@ -8,20 +8,79 @@ redirect_from:
   - /about.html
 ---
 
-<div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
-  <h2>About Me</h2>
+<style>
+.max-width-container {
+  max-width: 1200px; 
+  margin: 0 auto; 
+  padding: 0 20px;
+}
+
+.publication-item {
+  display: flex;
+  margin-bottom: 30px;
+  align-items: flex-start;
+}
+
+.publication-image {
+  flex: 0 0 180px;
+  margin-right: 20px;
+}
+
+.publication-image img, 
+.publication-image video {
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.publication-content {
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .publication-item {
+    flex-direction: column;
+  }
+  
+  .publication-image {
+    flex: 0 0 100%;
+    margin-bottom: 15px;
+    margin-right: 0;
+  }
+}
+
+.job-alert {
+  background-color: #fff0f0; 
+  padding: 15px; 
+  border-left: 4px solid #ff0000;
+  margin-bottom: 20px;
+}
+
+.section-header {
+  margin-top: 40px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.news-list, .awards-list, .teaching-list {
+  margin-left: 20px;
+}
+</style>
+
+<div class="max-width-container">
+  <h2 class="section-header">About Me</h2>
   <p>
-    I'm currently a Ph.D. candidate at NUS School of Computing, supervised by Prof <a href=" ">Gim hee Lee</a >. 
-    I received my B.E. degree from Wuhan University and MEng degree from Nanyang Technology University with a GPA of 5.0/5.0. During my master's study, I was supervised by Prof <a href="https://personal.ntu.edu.sg/exdjiang/">Jiang Xudong</a > and Dr <a href="https://person.zju.edu.cn/zq">Qian Zheng</a >.
+    I'm currently a Ph.D. candidate at NUS School of Computing, supervised by Prof <a href=" ">Gim hee Lee</a>. 
+    I received my B.E. degree from Wuhan University and MEng degree from Nanyang Technology University with a GPA of 5.0/5.0. During my master's study, I was supervised by Prof <a href="https://personal.ntu.edu.sg/exdjiang/">Jiang Xudong</a> and Dr <a href="https://person.zju.edu.cn/zq">Qian Zheng</a>.
     Currently, my research interests are mainly in 3D computer vision, especially in 3D Assets Generation and Human Digitization, including <strong>Reconstruction</strong> (Neural Fields & 3DGS), <strong>Animation</strong> (Skinning & Rigging), and <strong>Generation</strong> (Diffusion & AR).
-  </p >
+  </p>
   
-  <p style="background-color: #fff0f0; padding: 15px; border-left: 4px solid #ff0000;">
+  <p class="job-alert">
     <span style="color:red; font-weight:bold;">I'm on the job market and looking for a Research Scientist/Engineer position. Feel free to reach out if you have any openings!</span>
-  </p >
+  </p>
   
-  <h2>News</h2>
-  <div style="margin-left: 20px;">
+  <h2 class="section-header">News</h2>
+  <div class="news-list">
     <ul>
       <li><strong>🎉 [04.2025]</strong> Our MAR-3D is selected as <strong>Highlight</strong> in CVPR 2025 (Top 13.5% of accepted papers)</li>
       <li><strong>🎉 [02.2025]</strong> Two papers are accepted in CVPR 2025</li>
@@ -34,21 +93,139 @@ redirect_from:
     </ul>
   </div>
   
-  <h2>Teaching</h2>
-  <div style="margin-left: 20px;">
+  <h2 class="section-header">Publications</h2>
+
+  <div class="publication-item">
+    <div class="publication-image">
+      <img src="/images/teaser_muma.jpg" alt="MuMA Teaser">
+    </div>
+    <div class="publication-content">
+      <strong>MuMA: 3D PBR Texturing via Multi-Channel Multi-View Generation and Agentic Post-Processing.</strong> <a href="https://arxiv.org/abs/2503.18461">[arXiv]</a><br>
+      Lingting Zhu, Jingrui Ye, Runze Zhang, Zeyu Hu, Yingda Yin, Lanjiong Li, <strong>Jinnan Chen</strong>, Shengju Qian, Xin Wang, Qingmin Liao, Lequan Yu<br>
+      <em>Arxiv 2025</em>
+    </div>
+  </div>
+
+  <div class="publication-item">
+    <div class="publication-image">
+      <video width="100%" autoplay loop muted playsinline>
+        <source src="/videos/teaser_mar3d.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <div class="publication-content">
+      <strong>MAR-3D: Progressive Masked Auto-regressor for High-Resolution 3D Generation.</strong> <a href="https://arxiv.org/abs/2503.20519">[arXiv]</a> <a href="https://jinnan-chen.github.io/projects/MAR-3D/">[page]</a><br>
+      <strong>Jinnan Chen</strong>, Lingting Zhu, Zeyu Hu, Shengju Qian, Yugang Chen, Xin Wang, Gim Hee Lee<br>
+      <em>IEEE Conference on Computer Vision and Pattern Recognition（<strong>CVPR</strong>）2025</em>
+    </div>
+  </div>
+
+  <div class="publication-item">
+    <div class="publication-image">
+      <img src="/images/teaser_closeapp.jpg" alt="CloseApp Teaser">
+    </div>
+    <div class="publication-content">
+      <strong>Reconstructing Close Human Interaction with Appearance and Proxemics Reasoning.</strong> <a href="https://www.buzhenhuang.com/publications/papers/CVPR2025-CloseApp.pdf">[paper]</a> <a href="https://www.buzhenhuang.com/works/CloseApp.html">[page]</a><br>
+      Buzhen Huang, Chen Li, Chongyang Xu, Dongyue Lu, <strong>Jinnan Chen</strong>, Yangang Wang, Gim Hee Lee<br>
+      <em>IEEE Conference on Computer Vision and Pattern Recognition（<strong>CVPR</strong>）2025</em>
+    </div>
+  </div>
+
+  <div class="publication-item">
+    <div class="publication-image">
+      <video width="100%" autoplay loop muted playsinline>
+        <source src="/videos/teaser_hgm.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <div class="publication-content">
+      <strong>Generalizable Human Gaussians from Single-View Image.</strong> <a href="https://arxiv.org/abs/2406.06050">[arXiv]</a> <a href="https://jinnan-chen.github.io/projects/HGM/">[page]</a><br>
+      <strong>Jinnan Chen</strong>, Chen Li, Jianfeng Zhang, Lingting Zhu, Buzhen Huang, Hanlin Chen, Gim Hee Lee<br>
+      <em>The International Conference on Learning Representations（<strong>ICLR</strong>）2025</em>
+    </div>
+  </div>
+
+  <div class="publication-item">
+    <div class="publication-image">
+      <img src="/images/teaser_lig.jpg" alt="LIG Teaser">
+    </div>
+    <div class="publication-content">
+      <strong>Large Images are Gaussians: High-quality Large Image Representation with Levels of 2D Gaussian Splatting.</strong> <a href="https://arxiv.org/abs/2502.09039">[arXiv]</a> <a href="https://github.com/HKU-MedAI/LIG">[code]</a><br>
+      Lingting Zhu, Guying Lin, <strong>Jinnan Chen</strong>, Xinjie Zhang, Zhenchao Jin, Zhao Wang, Lequan Yu<br>
+      <em>The Association for the Advancement of Artificial Intelligence (<strong>AAAI</strong>) 2025</em>
+    </div>
+  </div>
+
+  <div class="publication-item">
+    <div class="publication-image">
+      <img src="/images/teaser_dihur.jpg" alt="DiHuR Teaser">
+    </div>
+    <div class="publication-content">
+      <strong>DiHuR: Diffusion-Guided Generalizable Human Reconstruction.</strong> <a href="https://arxiv.org/abs/2411.11903">[arXiv]</a><br>
+      <strong>Jinnan Chen</strong>, Chen Li, Gim Hee Lee<br>
+      <em>IEEE/CVF Winter Conference (<strong>WACV</strong>) 2025</em>
+    </div>
+  </div>
+
+  <div class="publication-item">
+    <div class="publication-image">
+      <img src="/images/teaser_ws3dpt.jpg" alt="WS3DPT Teaser">
+    </div>
+    <div class="publication-content">
+      <strong>Weakly-supervised 3D Pose Transfer with Keypoints.</strong> <a href="https://arxiv.org/abs/2307.13459">[arXiv]</a> <a href="https://jinnan-chen.github.io/ws3dpt/">[page]</a> <a href="https://github.com/jinnan-chen/3D-Pose-Transfer">[code]</a><br>
+      <strong>Jinnan Chen</strong>, Chen Li, Gim Hee Lee<br>
+      <em>IEEE International Conference on Computer Vision (<strong>ICCV</strong>) 2023</em>
+    </div>
+  </div>
+
+  <div class="publication-item">
+    <div class="publication-image">
+      <img src="/images/teaser_absorption.jpg" alt="Absorption Teaser">
+    </div>
+    <div class="publication-content">
+      <strong>Single image reflection removal with absorption effect.</strong> <a href="https://openaccess.thecvf.com/content/CVPR2021/html/Zheng_Single_Image_Reflection_Removal_With_Absorption_Effect_CVPR_2021_paper.html">[paper]</a> <a href="https://github.com/q-zh/absorption">[code]</a><br>
+      Qian Zheng, Boxin Shi, <strong>Jinnan Chen</strong>, Xudong Jiang, Ling-Yu Duan, Alex C. Kot<br>
+      <em>IEEE Conference on Computer Vision and Pattern Recognition (<strong>CVPR</strong>) 2021</em>
+    </div>
+  </div>
+
+  <div class="publication-item">
+    <div class="publication-image">
+      <img src="/images/teaser_distillation.jpg" alt="Feature Distillation Teaser">
+    </div>
+    <div class="publication-content">
+      <strong>Feature distillation with guided adversarial contrastive learning.</strong> <a href="https://arxiv.org/abs/2009.09922">[arXiv]</a><br>
+      Tao Bai, <strong>Jinnan Chen</strong>, Jun Zhao, Bihan Wen, Xudong Jiang, Alex Kot<br>
+      <em>Arxiv 2020</em>
+    </div>
+  </div>
+
+  <div class="publication-item">
+    <div class="publication-image">
+      <img src="/images/teaser_glass.jpg" alt="Glass Calibration Teaser">
+    </div>
+    <div class="publication-content">
+      <strong>What does plate glass reveal about camera calibration?</strong> <a href="https://openaccess.thecvf.com/content_CVPR_2020/html/Zheng_What_Does_Plate_Glass_Reveal_About_Camera_Calibration_CVPR_2020_paper.html">[paper]</a> <a href="https://github.com/q-zh/GlassCalibration">[code]</a><br>
+      Qian Zheng, <strong>Jinnan Chen</strong>, Zhan Lu, Boxin Shi, Xudong Jiang, Kim-Hui Yap, Ling-Yu Duan, Alex C. Kot<br>
+      <em>IEEE Conference on Computer Vision and Pattern Recognition (<strong>CVPR</strong>) 2020</em>
+    </div>
+  </div>
+  
+  <h2 class="section-header">Teaching</h2>
+  <div class="teaching-list">
     <ul>
       <li><strong>[2022]</strong> CS5340 Uncertainty Modelling in AI, National University of Singapore</li>
       <li><strong>[2022]</strong> CS5477 3D Computer Vision, National University of Singapore</li>
     </ul>
   </div>
   
-  <h2>Reviewer</h2>
-  <div style="margin-left: 20px;">
-    <p>CVPR, ICCV, NIPS, ICLR, ICML, AISTATS</p >
+  <h2 class="section-header">Reviewer</h2>
+  <div class="reviewer-list" style="margin-left: 20px;">
+    <p>CVPR, ICCV, NIPS, ICLR, ICML, AISTATS</p>
   </div>
   
-  <h2>Awards</h2>
-  <div style="margin-left: 20px;">
+  <h2 class="section-header">Awards</h2>
+  <div class="awards-list">
     <ul>
       <li>Wuhan University Excellent Student</li>
       <li>NUS Research Scholarship</li>
