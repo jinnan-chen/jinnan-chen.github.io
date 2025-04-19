@@ -9,7 +9,7 @@
 locale                   : "en-US"
 title                    : "Jinnan Chen"
 title_separator          : "-"
-name                     : &name "Jinnan Chen"
+name                     : &name "Jinnan Chen Homepage"
 description              : &description "PhD candidate at NUS working on 3D Computer Vision"
 url                      : https://jinnan-chen.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
