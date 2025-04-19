@@ -6,7 +6,7 @@ subtitle: # <a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
 
 profile:
   align: right
-  image: profile.png
+  image: /assets/img/profile.png # Fixed image path
   image_circular: false # crops the image to make it circular
   address: >
     <p>School of Computing</p>
@@ -92,6 +92,18 @@ body {
 .page__title {
   display: none;
 }
+
+/* Ensure social icons are visible */
+.social-icons {
+  display: flex !important;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  font-size: 1.5rem;
+}
 </style>
 
 <div class="max-width-container">
@@ -125,7 +137,7 @@ body {
 
   <article class="publication-item">
     <div class="publication-image">
-      <img src="images/Teaser_Muma.png" alt="MuMA: 3D PBR Texturing via Multi-Channel Multi-View Generation">
+      <img src="assets/img/images/Teaser_Muma.png" alt="MuMA: 3D PBR Texturing via Multi-Channel Multi-View Generation">
     </div>
     <div class="publication-content">
       <strong>MuMA: 3D PBR Texturing via Multi-Channel Multi-View Generation and Agentic Post-Processing.</strong> <a href="https://arxiv.org/abs/2503.18461">[arXiv]</a><br>
@@ -137,7 +149,7 @@ body {
   <article class="publication-item">
     <div class="publication-image">
       <video width="100%" autoplay loop muted playsinline>
-        <source src="videos/mar-3d.mov" type="video/mp4">
+        <source src="assets/img/videos/mar-3d.mov" type="video/mp4">
         Your browser does not support the video tag.
       </video>
     </div>
@@ -151,7 +163,7 @@ body {
   <article class="publication-item">
     <div class="publication-image">
       <video width="100%" autoplay loop muted playsinline>
-        <source src="videos/close.mp4" type="video/mp4">
+        <source src="assets/img/videos/close.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
     </div>
@@ -165,7 +177,7 @@ body {
   <article class="publication-item">
     <div class="publication-image">
       <video width="100%" autoplay loop muted playsinline>
-        <source src="videos/hgm.mov" type="video/mp4">
+        <source src="assets/img/videos/hgm.mov" type="video/mp4">
         Your browser does not support the video tag.
       </video>
     </div>
@@ -178,7 +190,7 @@ body {
 
   <article class="publication-item">
     <div class="publication-image">
-      <img src="images/teaser-lig.png" alt="Large Images are Gaussians: Levels of 2D Gaussian Splatting">
+      <img src="assets/img/images/teaser-lig.png" alt="Large Images are Gaussians: Levels of 2D Gaussian Splatting">
     </div>
     <div class="publication-content">
       <strong>Large Images are Gaussians: High-quality Large Image Representation with Levels of 2D Gaussian Splatting.</strong> <a href="https://arxiv.org/abs/2502.09039">[arXiv]</a> <a href="https://github.com/HKU-MedAI/LIG">[code]</a><br>
@@ -190,7 +202,7 @@ body {
   <article class="publication-item">
     <div class="publication-image">
       <video width="100%" autoplay loop muted playsinline>
-        <source src="videos/dihur.mov" type="video/mp4">
+        <source src="assets/img/videos/dihur.mov" type="video/mp4">
         Your browser does not support the video tag.
       </video>
     </div>
@@ -203,7 +215,7 @@ body {
 
   <article class="publication-item">
     <div class="publication-image">
-      <img src="images/ws3dpt.png" alt="Weakly-supervised 3D Pose Transfer with Keypoints">
+      <img src="assets/img/images/ws3dpt.png" alt="Weakly-supervised 3D Pose Transfer with Keypoints">
     </div>
     <div class="publication-content">
       <strong>Weakly-supervised 3D Pose Transfer with Keypoints.</strong> <a href="https://arxiv.org/abs/2307.13459">[arXiv]</a> <a href="https://jinnan-chen.github.io/ws3dpt/">[page]</a> <a href="https://github.com/jinnan-chen/3D-Pose-Transfer">[code]</a><br>
@@ -214,7 +226,7 @@ body {
 
   <article class="publication-item">
     <div class="publication-image">
-      <img src="images/teaser_absorption.png" alt="Single image reflection removal with absorption effect">
+      <img src="assets/img/images/teaser_absorption.png" alt="Single image reflection removal with absorption effect">
     </div>
     <div class="publication-content">
       <strong>Single image reflection removal with absorption effect.</strong> <a href="https://openaccess.thecvf.com/content/CVPR2021/html/Zheng_Single_Image_Reflection_Removal_With_Absorption_Effect_CVPR_2021_paper.html">[paper]</a> <a href="https://github.com/q-zh/absorption">[code]</a><br>
@@ -225,7 +237,7 @@ body {
 
   <article class="publication-item">
     <div class="publication-image">
-      <img src="images/teaser_distillation.png" alt="Feature distillation with guided adversarial contrastive learning">
+      <img src="assets/img/images/teaser_distillation.png" alt="Feature distillation with guided adversarial contrastive learning">
     </div>
     <div class="publication-content">
       <strong>Feature distillation with guided adversarial contrastive learning.</strong> <a href="https://arxiv.org/abs/2009.09922">[arXiv]</a><br>
@@ -236,41 +248,7 @@ body {
 
   <article class="publication-item">
     <div class="publication-image">
-      <img src="images/teaser_glass.png" alt="What does plate glass reveal about camera calibration?">
+      <img src="assets/img/images/teaser_glass.png" alt="What does plate glass reveal about camera calibration?">
     </div>
     <div class="publication-content">
-      <strong>What does plate glass reveal about camera calibration?</strong> <a href="https://openaccess.thecvf.com/content_CVPR_2020/html/Zheng_What_Does_Plate_Glass_Reveal_About_Camera_Calibration_CVPR_2020_paper.html">[paper]</a> <a href="https://github.com/q-zh/GlassCalibration">[code]</a><br>
-      Qian Zheng, <strong>Jinnan Chen</strong>, Zhan Lu, Boxin Shi, Xudong Jiang, Kim-Hui Yap, Ling-Yu Duan, Alex C. Kot<br>
-      <em>IEEE Conference on Computer Vision and Pattern Recognition (<strong>CVPR</strong>) 2020</em>
-    </div>
-  </article>
-  
-  <h2 class="section-header">Teaching</h2>
-  <div class="teaching-list">
-    <ul>
-      <li><strong>[2022]</strong> CS5340 Uncertainty Modelling in AI, National University of Singapore</li>
-      <li><strong>[2022]</strong> CS5477 3D Computer Vision, National University of Singapore</li>
-    </ul>
-  </div>
-  
-  <h2 class="section-header">Academic Services (Reviewer)</h2>
-  <div class="reviewer-list">
-    <ul>
-      <li>Conference on Computer Vision and Pattern Recognition (CVPR) 2024, 2025</li>
-      <li>IEEE/CVF International Conference on Computer Vision (ICCV) 2025</li>
-      <li>International Conference on Machine Learning (ICML) 2025</li>
-      <li>Conference on Neural Information Processing Systems (NeurIPS) 2024, 2025</li>
-      <li>International Conference on Learning Representations (ICLR) 2025</li>
-      <li>International Conference on Artificial Intelligence and Statistics (AISTATS) 2025</li>
-    </ul>
-  </div>
-  
-  <h2 class="section-header">Awards</h2>
-  <div class="awards-list">
-    <ul>
-      <li>Wuhan University Excellent Student</li>
-      <li>NUS Research Scholarship</li>
-      <li>NUS Research Achievement</li>
-    </ul>
-  </div>
-</div>
+      <strong>What does plate glass reveal about camera calibration?</strong> <a href="https://openaccess.thecvf.com/content_CVPR_2020/html/Zheng_What_Does_Plate_Glass_Reveal_About_Camera_Calibration
