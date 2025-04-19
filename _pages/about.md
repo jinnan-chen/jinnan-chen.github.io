@@ -109,7 +109,7 @@ redirect_from:
   <div class="publication-item">
     <div class="publication-image">
       <video width="100%" autoplay loop muted playsinline>
-        <source src="/videos/mar3d.mov" type="video/mp4">
+        <source src="/videos/mar-3d.mov" type="video/mp4">
         Your browser does not support the video tag.
       </video>
     </div>
