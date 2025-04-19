@@ -97,7 +97,7 @@ redirect_from:
 
   <div class="publication-item">
     <div class="publication-image">
-      <img src="/images/teaser_muma.jpg" alt="MuMA Teaser">
+      <img src="/images/Teaser_Muma.png" alt="MuMA Teaser">
     </div>
     <div class="publication-content">
       <strong>MuMA: 3D PBR Texturing via Multi-Channel Multi-View Generation and Agentic Post-Processing.</strong> <a href="https://arxiv.org/abs/2503.18461">[arXiv]</a><br>
