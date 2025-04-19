@@ -160,8 +160,10 @@ body {
 
   <div class="publication-item">
     <div class="publication-image">
-      <img src="/images/teaser_dihur.png" alt="DiHuR Teaser">
-    </div>
+      <video width="100%" autoplay loop muted playsinline>
+        <source src="/videos/dihur.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
     <div class="publication-content">
       <strong>DiHuR: Diffusion-Guided Generalizable Human Reconstruction.</strong> <a href="https://arxiv.org/abs/2411.11903">[arXiv]</a><br>
       <strong>Jinnan Chen</strong>, Chen Li, Gim Hee Lee<br>
