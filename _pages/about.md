@@ -166,7 +166,7 @@ body {
 <div class="publication-item">
   <div class="publication-image">
     <video width="100%" autoplay loop muted playsinline>
-      <source src="/videos/dihur.mp4" type="video/mp4">
+      <source src="/videos/dihur.mov" type="video/mp4">
       Your browser does not support the video tag.
     </video>
   </div><!-- This closing div was missing -->
