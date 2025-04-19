@@ -29,7 +29,7 @@ body {
 }
 
 .max-width-container {
-  max-width: 2000px;
+  max-width: 1500px;
   margin: 0 auto; 
   padding: 0 20px;
 }
