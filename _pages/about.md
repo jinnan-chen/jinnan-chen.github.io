@@ -49,12 +49,7 @@ redirect_from:
   }
 }
 
-.job-alert {
-  background-color: #fff0f0; 
-  padding: 15px; 
-  border-left: 4px solid #ff0000;
-  margin-bottom: 20px;
-}
+/* Job alert styling removed */
 
 .section-header {
   margin-top: 40px;
@@ -75,9 +70,7 @@ redirect_from:
     Currently, my research interests are mainly in 3D computer vision, especially in 3D Assets Generation and Human Digitization, including <strong>Reconstruction</strong> (Neural Fields & 3DGS), <strong>Animation</strong> (Skinning & Rigging), and <strong>Generation</strong> (Diffusion & AR).
   </p>
   
-  <p class="job-alert">
-    <span style="color:red; font-weight:bold;">I'm on the job market and looking for a Research Scientist/Engineer position. Feel free to reach out if you have any openings!</span>
-  </p>
+  <!-- Job alert removed -->
   
   <h2 class="section-header">News</h2>
   <div class="news-list">
@@ -109,7 +102,7 @@ redirect_from:
   <div class="publication-item">
     <div class="publication-image">
       <video width="100%" autoplay loop muted playsinline>
-        <source src="/videos/mar-3d.mov" type="video/mp4">
+        <source src="/videos/mar3d.mov" type="video/mp4">
         Your browser does not support the video tag.
       </video>
     </div>
@@ -158,7 +151,7 @@ redirect_from:
 
   <div class="publication-item">
     <div class="publication-image">
-      <img src="/images/teaser_dihur.jpg" alt="DiHuR Teaser">
+      <img src="/images/teaser_dihur.png" alt="DiHuR Teaser">
     </div>
     <div class="publication-content">
       <strong>DiHuR: Diffusion-Guided Generalizable Human Reconstruction.</strong> <a href="https://arxiv.org/abs/2411.11903">[arXiv]</a><br>
