@@ -162,7 +162,7 @@ redirect_from:
 
   <div class="publication-item">
     <div class="publication-image">
-      <img src="/images/teaser_ws3dpt.jpg" alt="WS3DPT Teaser">
+      <img src="/images/teaser_ws3dpt.png" alt="WS3DPT Teaser">
     </div>
     <div class="publication-content">
       <strong>Weakly-supervised 3D Pose Transfer with Keypoints.</strong> <a href="https://arxiv.org/abs/2307.13459">[arXiv]</a> <a href="https://jinnan-chen.github.io/ws3dpt/">[page]</a> <a href="https://github.com/jinnan-chen/3D-Pose-Transfer">[code]</a><br>
