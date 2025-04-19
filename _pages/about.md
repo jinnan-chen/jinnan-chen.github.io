@@ -6,19 +6,15 @@ subtitle: # <a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
 
 profile:
   align: right
-  image: profile.png
-  image_cicular: false # crops the image to make it circular
-  address: # >
-    # <p>555 your office number</p>
-    # <p>123 your address street</p>
-    # <p>Your City, State 12345</p>
+  image: prof_pic.jpg
+  image_circular: false # crops the image to make it circular
+  address: >
+    <p>School of Computing</p>
+    <p>National University of Singapore</p>
+    <p>Singapore</p>
 
 news: true  # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
-selected_patents: true # includes a list of patents marked as "selected={true}"
-inline_lists:
-  - teaching_assistants
-  - awards
 social: true  # includes social icons at the bottom of the page
 ---
 
@@ -29,7 +25,7 @@ body {
 }
 
 .max-width-container {
-  max-width: 800px;
+  max-width: 3000px;
   margin: 0 auto; 
   padding: 0 20px;
 }
@@ -88,7 +84,7 @@ body {
   padding-bottom: 10px;
 }
 
-.news-list, .awards-list, .teaching-list {
+.news-list, .awards-list, .teaching-list, .reviewer-list {
   margin-left: 20px;
 }
 
@@ -129,7 +125,7 @@ body {
 
   <article class="publication-item">
     <div class="publication-image">
-      <img src="/images/Teaser_Muma.png" alt="MuMA: 3D PBR Texturing via Multi-Channel Multi-View Generation">
+      <img src="/assets/img/Teaser_Muma.png" alt="MuMA: 3D PBR Texturing via Multi-Channel Multi-View Generation">
     </div>
     <div class="publication-content">
       <strong>MuMA: 3D PBR Texturing via Multi-Channel Multi-View Generation and Agentic Post-Processing.</strong> <a href="https://arxiv.org/abs/2503.18461">[arXiv]</a><br>
@@ -141,8 +137,7 @@ body {
   <article class="publication-item">
     <div class="publication-image">
       <video width="100%" autoplay loop muted playsinline>
-        <source src="/videos/mar-3d.mov" type="video/quicktime">
-        <source src="/videos/mar-3d.mp4" type="video/mp4">
+        <source src="/assets/video/mar-3d.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
     </div>
@@ -156,7 +151,7 @@ body {
   <article class="publication-item">
     <div class="publication-image">
       <video width="100%" autoplay loop muted playsinline>
-        <source src="/videos/close.mp4" type="video/mp4">
+        <source src="/assets/video/close.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
     </div>
@@ -170,8 +165,7 @@ body {
   <article class="publication-item">
     <div class="publication-image">
       <video width="100%" autoplay loop muted playsinline>
-        <source src="/videos/hgm.mov" type="video/quicktime">
-        <source src="/videos/hgm.mp4" type="video/mp4">
+        <source src="/assets/video/hgm.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
     </div>
@@ -184,7 +178,7 @@ body {
 
   <article class="publication-item">
     <div class="publication-image">
-      <img src="/images/teaser-lig.png" alt="Large Images are Gaussians: Levels of 2D Gaussian Splatting">
+      <img src="/assets/img/teaser-lig.png" alt="Large Images are Gaussians: Levels of 2D Gaussian Splatting">
     </div>
     <div class="publication-content">
       <strong>Large Images are Gaussians: High-quality Large Image Representation with Levels of 2D Gaussian Splatting.</strong> <a href="https://arxiv.org/abs/2502.09039">[arXiv]</a> <a href="https://github.com/HKU-MedAI/LIG">[code]</a><br>
@@ -196,8 +190,7 @@ body {
   <article class="publication-item">
     <div class="publication-image">
       <video width="100%" autoplay loop muted playsinline>
-        <source src="/videos/dihur.mov" type="video/quicktime">
-        <source src="/videos/dihur.mp4" type="video/mp4">
+        <source src="/assets/video/dihur.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
     </div>
@@ -210,7 +203,7 @@ body {
 
   <article class="publication-item">
     <div class="publication-image">
-      <img src="/images/ws3dpt.png" alt="Weakly-supervised 3D Pose Transfer with Keypoints">
+      <img src="/assets/img/ws3dpt.png" alt="Weakly-supervised 3D Pose Transfer with Keypoints">
     </div>
     <div class="publication-content">
       <strong>Weakly-supervised 3D Pose Transfer with Keypoints.</strong> <a href="https://arxiv.org/abs/2307.13459">[arXiv]</a> <a href="https://jinnan-chen.github.io/ws3dpt/">[page]</a> <a href="https://github.com/jinnan-chen/3D-Pose-Transfer">[code]</a><br>
@@ -221,7 +214,7 @@ body {
 
   <article class="publication-item">
     <div class="publication-image">
-      <img src="/images/teaser_absorption.png" alt="Single image reflection removal with absorption effect">
+      <img src="/assets/img/teaser_absorption.png" alt="Single image reflection removal with absorption effect">
     </div>
     <div class="publication-content">
       <strong>Single image reflection removal with absorption effect.</strong> <a href="https://openaccess.thecvf.com/content/CVPR2021/html/Zheng_Single_Image_Reflection_Removal_With_Absorption_Effect_CVPR_2021_paper.html">[paper]</a> <a href="https://github.com/q-zh/absorption">[code]</a><br>
@@ -232,7 +225,7 @@ body {
 
   <article class="publication-item">
     <div class="publication-image">
-      <img src="/images/teaser_distillation.png" alt="Feature distillation with guided adversarial contrastive learning">
+      <img src="/assets/img/teaser_distillation.png" alt="Feature distillation with guided adversarial contrastive learning">
     </div>
     <div class="publication-content">
       <strong>Feature distillation with guided adversarial contrastive learning.</strong> <a href="https://arxiv.org/abs/2009.09922">[arXiv]</a><br>
@@ -243,7 +236,7 @@ body {
 
   <article class="publication-item">
     <div class="publication-image">
-      <img src="/images/teaser_glass.png" alt="What does plate glass reveal about camera calibration?">
+      <img src="/assets/img/teaser_glass.png" alt="What does plate glass reveal about camera calibration?">
     </div>
     <div class="publication-content">
       <strong>What does plate glass reveal about camera calibration?</strong> <a href="https://openaccess.thecvf.com/content_CVPR_2020/html/Zheng_What_Does_Plate_Glass_Reveal_About_Camera_Calibration_CVPR_2020_paper.html">[paper]</a> <a href="https://github.com/q-zh/GlassCalibration">[code]</a><br>
@@ -261,9 +254,9 @@ body {
   </div>
   
   <h2 class="section-header">Academic Services (Reviewer)</h2>
-  <div class="reviewer-list" style="margin-left: 20px;">
+  <div class="reviewer-list">
     <ul>
-      <li>IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) 2024, 2025</li>
+      <li>Conference on Computer Vision and Pattern Recognition (CVPR) 2024, 2025</li>
       <li>IEEE/CVF International Conference on Computer Vision (ICCV) 2025</li>
       <li>International Conference on Machine Learning (ICML) 2025</li>
       <li>Conference on Neural Information Processing Systems (NeurIPS) 2024, 2025</li>
@@ -281,6 +274,3 @@ body {
     </ul>
   </div>
 </div>
-
-<!-- Add favicon -->
-<link rel="icon" type="image/png" href="/images/favicon.png">
