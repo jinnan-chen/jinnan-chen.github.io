@@ -12,34 +12,73 @@ redirect_from:
 body {
   margin: 0;
   padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
 }
 
 .max-width-container {
-  max-width: 1600px;
+  max-width: 1200px;
   margin: 0 auto; 
-  padding: 0 20px;
+  padding: 0 30px;
+  background-color: white;
+  box-shadow: 0 0 20px rgba(0,0,0,0.05);
+  border-radius: 8px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  padding-bottom: 40px;
 }
 
 .publication-item {
   display: flex;
-  margin-bottom: 30px;
-  align-items: center;
+  margin-bottom: 40px;
+  align-items: flex-start;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 20px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.publication-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
 .publication-image {
-  flex: 0 0 280px;
+  flex: 0 0 300px;
   margin-right: 30px;
 }
 
 .publication-image img, 
 .publication-image video {
   width: 100%;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
 
 .publication-content {
   flex: 1;
+}
+
+.publication-content strong {
+  font-size: 18px;
+  color: #2c3e50;
+}
+
+.publication-content a {
+  color: #3498db;
+  text-decoration: none;
+  margin-right: 8px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background-color: #e8f4fc;
+  transition: background-color 0.2s;
+}
+
+.publication-content a:hover {
+  background-color: #d2e9f7;
+  text-decoration: underline;
 }
 
 @media (max-width: 768px) {
@@ -49,24 +88,46 @@ body {
   
   .publication-image {
     flex: 0 0 100%;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     margin-right: 0;
+  }
+  
+  .max-width-container {
+    padding: 0 15px;
   }
 }
 
 .section-header {
-  margin-top: 40px;
-  border-bottom: 1px solid #eee;
+  margin-top: 50px;
+  border-bottom: 2px solid #3498db;
   padding-bottom: 10px;
+  color: #2c3e50;
+  font-size: 28px;
 }
 
 .news-list, .awards-list, .teaching-list {
   margin-left: 20px;
 }
 
+.news-list li, .awards-list li, .teaching-list li {
+  margin-bottom: 8px;
+}
+
 /* Hide the page title if it's duplicating the author name */
 .page__title {
   display: none;
+}
+
+.job-market {
+  color: #FF8000;
+  font-weight: bold;
+  font-size: 18px;
+  background-color: #fff7ed;
+  padding: 10px 15px;
+  border-radius: 6px;
+  border-left: 4px solid #FF8000;
+  display: inline-block;
+  margin-top: 15px;
 }
 </style>
 
@@ -75,7 +136,10 @@ body {
   <p>
     I'm currently a Ph.D. candidate at NUS School of Computing, supervised by Prof <a href=" ">Gim hee Lee</a>. 
     I received my B.E. degree from Wuhan University and MEng degree from Nanyang Technology University with a GPA of 5.0/5.0. During my master's study, I was supervised by Prof <a href="https://personal.ntu.edu.sg/exdjiang/">Jiang Xudong</a> and Dr <a href="https://person.zju.edu.cn/zq">Qian Zheng</a>.
+    
     Currently, my research interests are mainly in 3D computer vision, especially in 3D Assets Generation and Human Digitization, including <strong>Reconstruction</strong> (Neural Fields & 3DGS), <strong>Animation</strong> (Skinning & Rigging), and <strong>Generation</strong> (Diffusion & AR).
+
+    <span class="job-market">I'm on the job market and looking for a Research Scientist/Engineer position starting in the 2025 Fall. Feel free to reach out if you have any openings!</span>
   </p>
   
   <h2 class="section-header">News</h2>
@@ -164,6 +228,7 @@ body {
         <source src="/videos/dihur.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
+    </div>
     <div class="publication-content">
       <strong>DiHuR: Diffusion-Guided Generalizable Human Reconstruction.</strong> <a href="https://arxiv.org/abs/2411.11903">[arXiv]</a><br>
       <strong>Jinnan Chen</strong>, Chen Li, Gim Hee Lee<br>
