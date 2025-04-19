@@ -16,7 +16,7 @@ footer_text: >
   Icon by <a href="https://www.flaticon.com/authors/freepik">Freepik</a> from <a href="https://www.flaticon.com">Flaticon</a>.
   
 # Hosted by <a href="https://pages.github.com/">GitHub Pages</a>.
-keywords:  # add your own keywords or leave empty
+keywords: 3D vision, Computer Vision, AI  # add your own keywords or leave empty
 
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon:  # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
@@ -50,9 +50,9 @@ rss_icon: false
 # Layout
 # -----------------------------------------------------------------------------
 
-navbar_fixed: false
+navbar_fixed: true
 footer_fixed: true
-navbar_enabled: false
+navbar_enabled: true
 
 # Dimensions
 max_width: 800px
@@ -71,11 +71,11 @@ og_image: /assets/img/prof_pic.jpg # The site-wide (default for all links) Open 
 # Social integration
 # -----------------------------------------------------------------------------
 
-github_username: wengflow # your GitHub user name
+github_username: jinnan-chen # your GitHub user name
 gitlab_username: # your GitLab user name
-twitter_username: wengflow # your Twitter handle
-linkedin_username: wengfei-low # your LinkedIn user name
-scholar_userid: JNO9kRsAAAAJ # your Google Scholar ID
+twitter_username: # your Twitter handle
+linkedin_username: # your LinkedIn user name
+scholar_userid: # your Google Scholar ID
 orcid_id: # your ORCID ID
 medium_username: # your Medium username
 quora_username: # your Quora username
@@ -230,8 +230,8 @@ display_tags: ['formatting', 'images', 'links', 'math', 'code'] # this tags will
 
 scholar:
 
-  last_name: Low
-  first_name: [Weng Fei, W. F.]
+  last_name: Chen
+  first_name: [Jinnan, J. N.]
 
   style: apa
   locale: en
@@ -301,7 +301,7 @@ enable_math:                true   # enables math typesetting (uses MathJax)
 enable_tooltips:            true   # enables automatic tooltip links generated
                                    # for each section titles on pages and posts
 enable_darkmode:            true   # enables switching between light/dark modes
-enable_navbar_social:       false  # enables displaying social links in the
+enable_navbar_social:       true   # enables displaying social links in the
                                    # navbar on the about page
 enable_project_categories:  true   # enables categorization of projects into
                                    # multiple categories
