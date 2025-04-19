@@ -144,7 +144,7 @@ body {
     <div class="publication-content">
       <strong>MAR-3D: Progressive Masked Auto-regressor for High-Resolution 3D Generation.</strong> <a href="https://arxiv.org/abs/2503.20519">[arXiv]</a> <a href="https://jinnan-chen.github.io/projects/MAR-3D/">[page]</a><br>
       <strong>Jinnan Chen</strong>, Lingting Zhu, Zeyu Hu, Shengju Qian, Yugang Chen, Xin Wang, Gim Hee Lee<br>
-      <em>IEEE Conference on Computer Vision and Pattern Recognition（<strong>CVPR</strong>）2025</em>
+      <em>IEEE Conference on Computer Vision and Pattern Recognition（<strong>CVPR</strong>）2025 Highlight</em>
     </div>
   </article>
 
