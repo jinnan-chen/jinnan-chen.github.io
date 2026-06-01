@@ -1,431 +1,473 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="icon" href="/images/logo.png" type="image/png">
-  <link rel="shortcut icon" href="/images/logo.png" type="image/png">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jinnan(Kenny) Chen</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      color: #333;
-      background-color: #ffffff;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Jinnan (Kenny) Chen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#fbfaf7;
+    --surface:#ffffff;
+    --ink:#1a1a1a;
+    --ink-soft:#4a4a4a;
+    --ink-faint:#8a8580;
+    --accent:#9a3b2e;          /* terracotta */
+    --accent-soft:#c8634f;
+    --line:#e8e3da;
+    --tag:#f0ece3;
+    --maxw:920px;
+    --serif:'Newsreader',Georgia,serif;
+    --sans:'Inter',system-ui,sans-serif;
+    --mono:'JetBrains Mono',monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:var(--sans);
+    font-size:16px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+    background-image:radial-gradient(circle at 1px 1px,rgba(0,0,0,.025) 1px,transparent 0);
+    background-size:22px 22px;
+  }
+  a{color:var(--accent);text-decoration:none;transition:color .15s}
+  a:hover{color:var(--accent-soft)}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
 
-    .main-container {
-      display: flex;
-      flex-wrap: wrap;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 20px;
-      background-color: #fff;
-      /* Removed box-shadow to eliminate borders */
-    }
+  /* ---- top nav ---- */
+  nav{
+    position:sticky;top:0;z-index:50;
+    backdrop-filter:blur(10px);
+    background:rgba(251,250,247,.82);
+    border-bottom:1px solid var(--line);
+  }
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+  nav .brand{font-family:var(--serif);font-size:1.15rem;font-weight:600;color:var(--ink)}
+  nav .links{display:flex;gap:26px;font-size:.92rem;font-weight:500}
+  nav .links a{color:var(--ink-soft)}
+  nav .links a:hover{color:var(--accent)}
 
-    .profile-container {
-      flex: 0 0 25%;
-      padding: 20px;
-      background-color: #ffffff;
-      border-radius: 5px;
-      margin-right: 20px;
-      margin-bottom: 20px;
-      align-self: flex-start;
-      margin-top: 40px;
-    }
+  /* ---- hero ---- */
+  header{padding:60px 0 36px}
+  .hero{display:grid;grid-template-columns:200px 1fr;gap:42px;align-items:start}
+  .photo-col{display:flex;flex-direction:column;align-items:center;gap:18px}
+  .photo{
+    width:190px;height:190px;border-radius:8px;object-fit:cover;
+    border:1px solid var(--line);
+    box-shadow:0 10px 30px -12px rgba(0,0,0,.25);
+    background:var(--tag);
+  }
+  .loc{font-size:.85rem;color:var(--ink-faint);display:flex;align-items:center;gap:6px}
+  .socials{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
+  .socials a{color:var(--ink-soft)}
+  .socials a:hover{color:var(--accent)}
+  .socials svg{width:21px;height:21px;display:block}
 
-    .profile-image {
-      width: 100%;
-      max-width: 250px;
-      margin-bottom: 15px;
-      border-radius: 5px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
+  .bio h1{font-family:var(--serif);font-size:2.5rem;font-weight:600;letter-spacing:-.5px;line-height:1.05;margin-bottom:4px}
+  .bio .han{font-family:var(--serif);color:var(--ink-faint);font-size:1.4rem;font-weight:400}
+  .bio .role{font-size:.98rem;color:var(--ink-soft);margin:10px 0 18px;font-weight:500}
+  .bio p{color:var(--ink-soft);margin-bottom:14px;font-size:.97rem}
+  .bio strong{color:var(--ink);font-weight:600}
+  .pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+  .pill{
+    font-size:.78rem;font-weight:500;padding:4px 11px;border-radius:20px;
+    background:var(--tag);color:var(--ink-soft);border:1px solid var(--line);
+  }
 
-    .profile-address {
-      margin-top: 15px;
-      font-size: 14px;
-    }
+  /* ---- section ---- */
+  section{padding:30px 0;border-top:1px solid var(--line)}
+  .sec-head{display:flex;align-items:baseline;gap:14px;margin-bottom:24px}
+  .sec-head h2{
+    font-family:var(--serif);font-size:1.5rem;font-weight:600;letter-spacing:-.3px;
+  }
+  .sec-head .rule{flex:1;height:1px;background:var(--line)}
 
-    .content-container {
-      flex: 1;
-      min-width: 60%;
-      padding-top: 20px;
-      align-self: flex-start;
-    }
+  /* ---- timeline (exp/edu) ---- */
+  .twocol{display:grid;grid-template-columns:1fr 1fr;gap:38px}
+  .tl-block h3{
+    font-family:var(--sans);font-size:.78rem;font-weight:700;letter-spacing:.12em;
+    text-transform:uppercase;color:var(--accent);margin-bottom:16px;
+  }
+  .tl-item{display:flex;gap:14px;padding:10px 0}
+  .tl-logo{
+    width:42px;height:42px;border-radius:8px;flex-shrink:0;
+    background:var(--surface);border:1px solid var(--line);
+    display:flex;align-items:center;justify-content:center;
+    font-family:var(--serif);font-weight:600;color:var(--accent);font-size:1.1rem;
+    overflow:hidden;
+  }
+  .tl-body .org{font-weight:600;font-size:.95rem;color:var(--ink)}
+  .tl-body .det{font-size:.86rem;color:var(--ink-soft)}
+  .tl-body .yr{font-size:.78rem;color:var(--ink-faint);font-family:var(--mono);margin-top:2px}
 
-    .max-width-container {
-      max-width: 900px;
-      margin: 0 auto; 
-      padding: 0 20px;
-    }
+  /* ---- news ---- */
+  .news{display:flex;flex-direction:column;gap:2px;max-height:none}
+  .news-row{display:flex;gap:16px;padding:7px 0;border-bottom:1px dashed var(--line);font-size:.92rem}
+  .news-row:last-child{border-bottom:none}
+  .news-date{font-family:var(--mono);font-size:.78rem;color:var(--accent);flex-shrink:0;width:92px;padding-top:3px}
+  .news-txt{color:var(--ink-soft)}
+  .news-txt strong{color:var(--ink);font-weight:600}
 
-    .publication-item {
-      display: flex;
-      margin-bottom: 30px;
-      align-items: center;
-    }
+  /* ---- publications ---- */
+  .pub-cat{
+    font-family:var(--sans);font-size:.78rem;font-weight:700;letter-spacing:.12em;
+    text-transform:uppercase;color:var(--accent);margin:28px 0 16px;
+    display:flex;align-items:center;gap:10px;
+  }
+  .pub-cat::after{content:"";flex:1;height:1px;background:var(--line)}
+  .pub-cat:first-of-type{margin-top:4px}
+  .pub{
+    display:grid;grid-template-columns:170px 1fr;gap:22px;
+    padding:18px;margin-bottom:8px;border-radius:12px;
+    transition:background .18s,transform .18s;
+  }
+  .pub:hover{background:var(--surface);box-shadow:0 8px 26px -16px rgba(0,0,0,.22);transform:translateY(-1px)}
+  .pub-media{
+    width:170px;aspect-ratio:3/2;border-radius:8px;overflow:hidden;
+    background:var(--tag);border:1px solid var(--line);
+    display:flex;align-items:center;justify-content:center;
+  }
+  .pub-media img,.pub-media video{width:100%;height:100%;object-fit:cover}
+  .pub-media .ph{font-family:var(--serif);color:var(--ink-faint);font-size:.8rem;padding:8px;text-align:center}
+  .pub-title{font-family:var(--serif);font-size:1.12rem;font-weight:600;line-height:1.3;color:var(--ink);margin-bottom:5px}
+  .pub-authors{font-size:.88rem;color:var(--ink-soft);margin-bottom:5px}
+  .pub-authors .me{color:var(--ink);font-weight:700}
+  .pub-venue{font-size:.85rem;color:var(--ink-faint);font-style:italic;margin-bottom:9px}
+  .pub-venue .badge{
+    font-style:normal;font-family:var(--mono);font-size:.72rem;font-weight:500;
+    background:var(--accent);color:#fff;padding:2px 8px;border-radius:5px;margin-left:6px;letter-spacing:.02em;
+  }
+  .pub-venue .hl{font-style:normal;font-weight:600;color:var(--accent-soft)}
+  .pub-links{display:flex;flex-wrap:wrap;gap:8px}
+  .pub-links a{
+    font-size:.78rem;font-weight:500;font-family:var(--mono);
+    padding:3px 10px;border-radius:6px;border:1px solid var(--line);
+    background:var(--surface);color:var(--ink-soft);
+  }
+  .pub-links a:hover{border-color:var(--accent);color:var(--accent);background:#fff}
 
-    .publication-image {
-      flex: 0 0 280px;
-      margin-right: 30px;
-    }
+  /* ---- lists (teaching/service) ---- */
+  .plainlist{list-style:none;display:flex;flex-direction:column;gap:9px}
+  .plainlist li{font-size:.92rem;color:var(--ink-soft);padding-left:20px;position:relative}
+  .plainlist li::before{content:"▸";position:absolute;left:0;color:var(--accent);font-size:.8rem;top:1px}
+  .plainlist li .yr{font-family:var(--mono);font-size:.78rem;color:var(--accent);margin-right:6px}
 
-    .publication-image img, 
-    .publication-image video {
-      width: 100%;
-      border-radius: 5px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
+  footer{padding:36px 0 50px;text-align:center;color:var(--ink-faint);font-size:.82rem;border-top:1px solid var(--line)}
+  footer .mono{font-family:var(--mono)}
 
-    .publication-content {
-      flex: 1;
-    }
+  /* reveal animation */
+  .reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+  .reveal.in{opacity:1;transform:none}
 
-    @media (max-width: 768px) {
-      .main-container {
-        flex-direction: column;
-      }
-      
-      .profile-container {
-        flex: 0 0 100%;
-        margin-right: 0;
-      }
-      
-      .publication-item {
-        flex-direction: column;
-      }
-      
-      .publication-image {
-        flex: 0 0 100%;
-        margin-bottom: 15px;
-        margin-right: 0;
-      }
-    }
-
-    @media (max-width: 576px) {
-      .publication-content {
-        font-size: 14px;
-      }
-      
-      .section-header {
-        font-size: 20px;
-      }
-      
-      .publication-image {
-        max-width: 100%;
-      }
-    }
-
-    .section-header {
-      margin-top: 40px;
-      border-bottom: 1px solid #eee;
-      padding-bottom: 10px;
-    }
-
-    .news-list, .awards-list, .teaching-list, .reviewer-list {
-      margin-left: 20px;
-    }
-
-    /* Social media icons */
-    .social-icons {
-      display: flex;
-      flex-direction: column;
-      margin-top: 20px;
-    }
-
-    .social-icons a {
-      display: flex;
-      align-items: center;
-      margin-bottom: 10px;
-      text-decoration: none;
-      color: #333;
-      transition: color 0.3s ease;
-    }
-
-    .social-icons a:hover {
-      color: #0366d6;
-    }
-
-    .social-icons i {
-      width: 20px;
-      margin-right: 10px;
-      font-size: 1.2rem;
-    }
-    
-    /* Job market highlight */
-    .job-market {
-      background-color: #ffffff;
-      padding: 15px;
-      border-radius: 5px;
-      margin: 20px 0;
-    }
-  </style>
-  <!-- Font Awesome for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  @media(max-width:760px){
+    .hero{grid-template-columns:1fr;gap:26px}
+    .photo-col{flex-direction:row;align-items:center;justify-content:flex-start;flex-wrap:wrap}
+    .photo{width:128px;height:128px}
+    .bio h1{font-size:2rem}
+    .twocol{grid-template-columns:1fr;gap:26px}
+    .pub{grid-template-columns:1fr;gap:12px}
+    .pub-media{width:100%;max-width:280px}
+    .news-date{width:78px}
+    nav .links{gap:16px;font-size:.85rem}
+  }
+</style>
 </head>
 <body>
-  <div class="main-container">
-    <!-- Profile Section -->
-    <div class="profile-container">
-      <img src="profile.png" alt="Jinnan Chen Profile" class="profile-image">
-      <div class="profile-address">
-        <p><i class="fas fa-map-marker-alt"></i> <span style="font-size: 16px;">Singapore</span></p>
-      </div>
-      
-      <!-- Social Media Links -->
-      <div class="social-icons">
-        <a href="mailto:jinnancv@gmail.com" title="Email">
-          <i class="fas fa-envelope"></i> Email
-        </a>
-        <a href="https://www.linkedin.com/in/jinnan-kenny-chen-146b2317b/" title="LinkedIn">
-          <i class="fab fa-linkedin"></i> LinkedIn
-        </a>
-        <a href="https://x.com/jinmelo7" title="X (Twitter)">
-          <i class="fab fa-twitter"></i> X (Twitter)
-        </a>
-        <a href="https://scholar.google.com.sg/citations?user=7idMjaQAAAAJ&hl=zh-CN" title="Google Scholar">
-          <i class="fas fa-graduation-cap"></i> Google Scholar
-        </a>
-        <a href="https://github.com/jinnan-chen" title="GitHub">
-          <i class="fab fa-github"></i> GitHub
-        </a>
-      </div>
+
+<nav>
+  <div class="wrap">
+    <span class="brand">Jinnan Chen</span>
+    <div class="links">
+      <a href="#about">About</a>
+      <a href="#news">News</a>
+      <a href="#publications">Publications</a>
+      <a href="#more">More</a>
     </div>
+  </div>
+</nav>
 
-    <!-- Content Section -->
-    <div class="content-container">
-      <div class="max-width-container">
-        <h1 style="font-size: 32px; font-weight: 700; margin-top: 40px; border-bottom: 1px solid #eee; padding-bottom: 10px;" id="about">Jinnan Chen</h1>
-        <p>
-          I'm currently a Ph.D. candidate at NUS School of Computing, supervised by Prof <a href="https://www.comp.nus.edu.sg/~leegh/">Gim Hee Lee</a>. 
-          I received my B.E. degree from Wuhan University and MEng degree from Nanyang Technology University with a GPA of 5.0/5.0. During my master's study, I was supervised by Prof <a href="https://personal.ntu.edu.sg/exdjiang/">Jiang Xudong</a> and Dr <a href="https://person.zju.edu.cn/zq">Qian Zheng</a>.
-        </p>
-        <p>
-          Currently, my research interests are mainly in Computer Vision and Generative Models, including <strong>3D Generation/Reconstruction/Animation</strong> (Mesh & 3DGS & Rigging/Skinning), <strong>Multimodal Video Generation</strong> (AR & Diffusion) and <strong>Unified Models</strong> (Understanding & Generation).
-        </p>
-        
-        <div class="job-market">
-          <span style="color: orange; font-weight: bold;">I'm always open to research collaborations and discussions, feel free to contact me through email!</span>
+<header id="about">
+  <div class="wrap">
+    <div class="hero reveal">
+      <div class="photo-col">
+        <img class="photo" src="profile.png" alt="Jinnan Chen">
+        <div class="loc">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.3-7-11a7 7 0 1 1 14 0c0 4.7-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          California
         </div>
-        
-        <h2 class="section-header" id="news">News</h2>
-        <div class="news-list">
-          <ul>
-            <li><strong>🎉 [04.2026]</strong> One paper is accepted in TIP 2026</li>
-            <li><strong>🎉 [09.2025]</strong> One paper is accepted in NeurIPS 2025</li>
-            <li><strong>🎉 [05.2025]</strong> I am selected as Outstanding Reviewer in CVPR 2025</li>
-            <li><strong>🎉 [04.2025]</strong> MAR-3D is selected as <strong>Highlight</strong> in CVPR 2025 (Top 3% of submissions)</li>
-            <li><strong>🎉 [02.2025]</strong> Two papers are accepted in CVPR 2025</li>
-            <li><strong>🎉 [01.2025]</strong> One paper is accepted in ICLR 2025</li>
-            <li><strong>🎉 [12.2024]</strong> One paper is accepted in AAAI 2025</li>
-            <li><strong>🎉 [10.2024]</strong> One paper is accepted in WACV 2025</li>
-            <li><strong>🎉 [06.2023]</strong> One paper is accepted in ICCV 2023</li>
-            <li><strong>🎉 [02.2021]</strong> One paper is accepted in CVPR 2021</li>
-            <li><strong>🎉 [02.2020]</strong> One paper is accepted in CVPR 2020</li>
-          </ul>
+        <div class="socials">
+          <a href="mailto:jinnancv@gmail.com" title="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 6 10 7L22 6"/></svg></a>
+          <a href="https://scholar.google.com.sg/citations?user=7idMjaQAAAAJ&hl=en" title="Google Scholar"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 1 8.5 12 15l9-5.32V16h2V8.5L12 2zM5 13.18v3.32L12 20l7-3.5v-3.32l-7 4.14-7-4.14z"/></svg></a>
+          <a href="https://github.com/jinnan-chen" title="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49v-1.7c-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.89 1.57 2.34 1.12 2.91.85.09-.66.35-1.12.63-1.38-2.22-.26-4.55-1.14-4.55-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05a9.3 9.3 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.06.36.32.68.94.68 1.9v2.82c0 .27.18.6.69.49A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2z"/></svg></a>
+          <a href="https://www.linkedin.com/in/jinnan-kenny-chen-146b2317b/" title="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 1 0 5 8.5a2.5 2.5 0 0 0-.02-5zM3 9h4v12H3zM9 9h3.8v1.64h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.78 2.45 4.78 5.64V21h-4v-5.3c0-1.26-.02-2.9-1.77-2.9-1.77 0-2.04 1.38-2.04 2.8V21H9z"/></svg></a>
+          <a href="https://x.com/jinmelo7" title="X"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2H22l-7.4 8.46L23.3 22h-6.8l-5.3-6.96L5.13 22H2l7.9-9.05L1.5 2h6.97l4.8 6.34zm-1.2 18h1.9L7.3 4H5.3z"/></svg></a>
         </div>
-        
-        <h2 class="section-header" id="publications">Publications</h2>
+      </div>
 
-        <article class="publication-item">
-          <div class="publication-image">
-            <img src="images/Teaser_Muma.png" alt="MuMA: 3D PBR Texturing via Multi-Channel Multi-View Generation">
-          </div>
-          <div class="publication-content">
-            <strong>MuMA: 3D PBR Texturing via Multi-Channel Multi-View Generation and Agentic Post-Processing.</strong> <a href="https://arxiv.org/abs/2503.18461">[arXiv]</a><br>
-            Lingting Zhu, Jingrui Ye, Runze Zhang, Zeyu Hu, Yingda Yin, Lanjiong Li, <strong>Jinnan Chen</strong>, Shengju Qian, Xin Wang, Qingmin Liao, Lequan Yu<br>
-            <em>IEEE Transactions on Image Processing (<strong>TIP</strong>) 2026
-</em>
-          </div>
-        </article>
-        
-        <article class="publication-item">
-          <div class="publication-image">
-            <img src="images/ultrashape.png" alt="UltraShape 1.0: High-Fidelity 3D Shape Generation via Scalable Geometric Refinement.">
-          </div>
-          <div class="publication-content">
-            <strong>UltraShape 1.0: High-Fidelity 3D Shape Generation via Scalable Geometric Refinement.</strong> 
-            <a href="https://arxiv.org/abs/2512.21185">[arXiv]</a> <a href="https://pku-yuangroup.github.io/UltraShape-1.0/">[page]</a><br>
-            Tanghui Jia, Dongyu Yan, Dehao Hao, Yang Li, Kaiyi Zhang, Xianyi He, Lanjiong Li, <strong>Jinnan Chen</strong>, Lutao Jiang, Qishen Yin, Long Quan, Ying-Cong Chen, Li Yuan
-            <em>Techqical Report (<strong>ArXiv</strong>) 2025</em>
-          </div>
-        </article>
-        
-        <article class="publication-item">
-          <div class="publication-image">
-            <img src="images/human-motion.gif" alt="Auto-Connect: Connectivity-Preserving RigFormer with Direct Preference Optimization">
-          </div>
-          <div class="publication-content">
-            <strong>Auto-Connect: Connectivity-Preserving RigFormer with Direct Preference Optimization.</strong> 
-            <a href="https://arxiv.org/abs/2506.11430">[arXiv]</a> <a href="https://autoconnectrig.github.io/">[page]</a><br>
-            Jingfeng Guo*, Jian Liu*, <strong>Jinnan Chen</strong>†, Shiwei Mao, Changrong Hu, Puhua Jiang, Junlin Yu, Jing Xu, Qi Liu†, Lixin Xu, Zhuo Chen, Chunchao Guo
-            <strong>(† Indicates Corresponding Author)</strong><br>
-            <em>Annual Conference on Neural Information Processing Systems (<strong>NeurIPS</strong>) 2025</em>
-          </div>
-        </article>
-                
-        <article class="publication-item">
-          <div class="publication-image">
-            <video width="100%" autoplay loop muted playsinline>
-              <source src="videos/mar-3d.mov" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-          </div>
-          <div class="publication-content">
-            <strong>MAR-3D: Progressive Masked Auto-regressor for High-Resolution 3D Generation.</strong> <a href="https://arxiv.org/abs/2503.20519">[arXiv]</a> <a href="https://jinnan-chen.github.io/projects/MAR-3D/">[page]</a> <a href="https://github.com/jinnan-chen/MAR-3D">[code]</a><br>
-            <strong>Jinnan Chen</strong>, Lingting Zhu, Zeyu Hu, Shengju Qian, Yugang Chen, Xin Wang, Gim Hee Lee<br>
-            <em>IEEE Conference on Computer Vision and Pattern Recognition（<strong>CVPR</strong>）2025 <strong>Highlight</strong></em>
-          </div>
-        </article>
-
-        <article class="publication-item">
-          <div class="publication-image">
-            <video width="100%" autoplay loop muted playsinline>
-              <source src="videos/close.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-          </div>
-          <div class="publication-content">
-            <strong>Reconstructing Close Human Interaction with Appearance and Proxemics Reasoning.</strong> <a href="https://arxiv.org/abs/2507.02565">[arXiv]</a> <a href="https://www.buzhenhuang.com/works/CloseApp.html">[page]</a> <a href="https://github.com/boycehbz/CloseApp">[code]</a><br>
-            Buzhen Huang, Chen Li, Chongyang Xu, Dongyue Lu, <strong>Jinnan Chen</strong>, Yangang Wang, Gim Hee Lee<br>
-            <em>IEEE Conference on Computer Vision and Pattern Recognition（<strong>CVPR</strong>）2025</em>
-          </div>
-        </article>
-
-        <article class="publication-item">
-          <div class="publication-image">
-            <video width="100%" autoplay loop muted playsinline>
-              <source src="videos/hgm.mov" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-          </div>
-          <div class="publication-content">
-            <strong>Generalizable Human Gaussians from Single-View Image.</strong> <a href="https://arxiv.org/abs/2406.06050">[arXiv]</a> <a href="https://jinnan-chen.github.io/projects/HGM/">[page]</a> <a href="https://github.com/jinnan-chen/HGM">[code]</a><br>
-            <strong>Jinnan Chen</strong>, Chen Li, Jianfeng Zhang, Lingting Zhu, Buzhen Huang, Hanlin Chen, Gim Hee Lee<br>
-            <em>The International Conference on Learning Representations（<strong>ICLR</strong>）2025</em>
-          </div>
-        </article>
-
-        <article class="publication-item">
-          <div class="publication-image">
-            <img src="images/teaser-lig.png" alt="Large Images are Gaussians: Levels of 2D Gaussian Splatting">
-          </div>
-          <div class="publication-content">
-            <strong>Large Images are Gaussians: High-quality Large Image Representation with Levels of 2D Gaussian Splatting.</strong> <a href="https://arxiv.org/abs/2502.09039">[arXiv]</a> <a href="https://github.com/HKU-MedAI/LIG">[code]</a><br>
-            Lingting Zhu, Guying Lin, <strong>Jinnan Chen</strong>, Xinjie Zhang, Zhenchao Jin, Zhao Wang, Lequan Yu<br>
-            <em>The Association for the Advancement of Artificial Intelligence (<strong>AAAI</strong>) 2025</em>
-          </div>
-        </article>
-        
-
-              
-        <article class="publication-item">
-          <div class="publication-image">
-            <img src="images/Teaser_Forge4D.png" alt="Forge4D: 4D Scene Generation">
-          </div>
-          <div class="publication-content">
-            <strong>Forge4D: Feed-Forward 4D Human Reconstruction and Interpolation from Uncalibrated Sparse Videos.</strong> 
-            <a href="https://arxiv.org/abs/2509.24209">[arXiv]</a> 
-            <a href="https://zhenliuzju.github.io/huyingdong/Forge4D/">[Project Page]</a><br>
-            Yingdong Hu*, Yisheng He*†, <strong>Jinnan Chen</strong>, Weihao Yuan, Kejie Qiu, Zehong Lin, Siyu Zhu, Zilong Dong, Jun Zhang<br>
-            <em>Arxiv 2025</em>
-          </div>
-        </article>
-              
-        <article class="publication-item">
-          <div class="publication-image">
-            <video width="100%" autoplay loop muted playsinline>
-              <source src="videos/dihur.mov" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-          </div>
-          <div class="publication-content">
-            <strong>DiHuR: Diffusion-Guided Generalizable Human Reconstruction.</strong> <a href="https://arxiv.org/abs/2411.11903">[arXiv]</a><br>
-            <strong>Jinnan Chen</strong>, Chen Li, Gim Hee Lee<br>
-            <em>IEEE/CVF Winter Conference (<strong>WACV</strong>) 2025</em>
-          </div>
-        </article>
-
-        <article class="publication-item">
-          <div class="publication-image">
-            <img src="images/ws3dpt.png" alt="Weakly-supervised 3D Pose Transfer with Keypoints">
-          </div>
-          <div class="publication-content">
-            <strong>Weakly-supervised 3D Pose Transfer with Keypoints.</strong> <a href="https://arxiv.org/abs/2307.13459">[arXiv]</a> <a href="https://jinnan-chen.github.io/ws3dpt/">[page]</a> <a href="https://github.com/jinnan-chen/3D-Pose-Transfer">[code]</a><br>
-            <strong>Jinnan Chen</strong>, Chen Li, Gim Hee Lee<br>
-            <em>IEEE International Conference on Computer Vision (<strong>ICCV</strong>) 2023</em>
-          </div>
-        </article>
-
-        <article class="publication-item">
-          <div class="publication-image">
-            <img src="images/teaser_absorption.png" alt="Single image reflection removal with absorption effect">
-          </div>
-          <div class="publication-content">
-            <strong>Single image reflection removal with absorption effect.</strong> <a href="https://openaccess.thecvf.com/content/CVPR2021/html/Zheng_Single_Image_Reflection_Removal_With_Absorption_Effect_CVPR_2021_paper.html">[paper]</a> <a href="https://github.com/q-zh/absorption">[code]</a><br>
-            Qian Zheng, Boxin Shi, <strong>Jinnan Chen</strong>, Xudong Jiang, Ling-Yu Duan, Alex C. Kot<br>
-            <em>IEEE Conference on Computer Vision and Pattern Recognition (<strong>CVPR</strong>) 2021</em>
-          </div>
-        </article>
-
-        <article class="publication-item">
-          <div class="publication-image">
-            <img src="images/teaser_distillation.png" alt="Feature distillation with guided adversarial contrastive learning">
-          </div>
-          <div class="publication-content">
-            <strong>Feature distillation with guided adversarial contrastive learning.</strong> <a href="https://arxiv.org/abs/2009.09922">[arXiv]</a><br>
-            Tao Bai, <strong>Jinnan Chen</strong>, Jun Zhao, Bihan Wen, Xudong Jiang, Alex Kot<br>
-            <em>Arxiv 2020</em>
-          </div>
-        </article>
-
-        <article class="publication-item">
-          <div class="publication-image">
-            <img src="images/teaser_glass.png" alt="What does plate glass reveal about camera calibration?">
-          </div>
-          <div class="publication-content">
-            <strong>What does plate glass reveal about camera calibration?</strong> <a href="https://openaccess.thecvf.com/content_CVPR_2020/html/Zheng_What_Does_Plate_Glass_Reveal_About_Camera_Calibration_CVPR_2020_paper.html">[paper]</a> <a href="https://github.com/q-zh/GlassCalibration">[code]</a><br>
-            Qian Zheng, <strong>Jinnan Chen</strong>, Zhan Lu, Boxin Shi, Xudong Jiang, Kim-Hui Yap, Ling-Yu Duan, Alex C. Kot<br>
-            <em>IEEE Conference on Computer Vision and Pattern Recognition (<strong>CVPR</strong>) 2020</em>
-          </div>
-        </article>
-        
-        <h2 class="section-header" id="teaching">Teaching</h2>
-        <div class="teaching-list">
-          <ul>
-            <li>[2022] CS5340 Uncertainty Modelling in AI, National University of Singapore</li>
-            <li>[2022] CS5477 3D Computer Vision, National University of Singapore</li>
-          </ul>
+      <div class="bio">
+        <h1>Jinnan Chen</h1>
+        <div class="role">AI Engineer · Roblox Foundation AI</div>
+        <p>I received my Ph.D. from the <strong>National University of Singapore</strong> School of Computing in 2025, advised by Prof. <a href="https://www.comp.nus.edu.sg/~leegh/">Gim Hee Lee</a>. Before that I received my B.E. from <strong>Wuhan University</strong> and my M.Eng. from <strong>Nanyang Technological University</strong> (GPA 5.0/5.0), where I was advised by Prof. <a href="https://personal.ntu.edu.sg/exdjiang/">Xudong Jiang</a> and Dr. <a href="https://person.zju.edu.cn/zq">Zheng Qian</a>.</p>
+        <p>My research centers on <strong>Computer Vision</strong> and <strong>Generative Models</strong> — including 3D Generation / Reconstruction / Animation (Mesh, 3DGS, Rigging &amp; Skinning), Multimodal Video Generation (AR &amp; Diffusion), and Unified Understanding–Generation Models. I'm currently an AI Engineer on <strong>Foundation AI at Roblox</strong>, and previously interned at <strong>Hedra Labs</strong>, <strong>Tencent Games</strong>, and <strong>ByteDance AI Lab</strong>.</p>
+        <p>I'm always open to research collaborations and discussions — feel free to reach out by <a href="mailto:jinnancv@gmail.com">email</a>.</p>
+        <div class="pills">
+          <span class="pill">3D Generation</span>
+          <span class="pill">Reconstruction</span>
+          <span class="pill">Gaussian Splatting</span>
+          <span class="pill">Rigging &amp; Skinning</span>
+          <span class="pill">Video Generation</span>
+          <span class="pill">Unified Models</span>
         </div>
-        
-        <h2 class="section-header" id="service">Academic Services (Reviewer)</h2>
-        <div class="reviewer-list">
-          <ul>
-            <li>IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) 2024,2025,2026</li>
-            <li>IEEE/CVF International Conference on Computer Vision (ICCV) 2025</li>
-            <li>The European Conference on Computer Vision (ECCV) 2026</li>
-            <li>International Conference on Machine Learning (ICML) 2025,2026</li>
-            <li>Conference on Neural Information Processing Systems (NeurIPS) 2024,2025</li>
-            <li>International Conference on Learning Representations (ICLR) 2025,2026</li>
-            <li>International Conference on Artificial Intelligence and Statistics (AISTATS) 2025,2026</li>
-            <li>The Association for the Advancement of Artificial Intelligence (AAAI) 2026</li>
-            <li>Transactions on Machine Learning Research (TMLR) </li>
-
-          </ul>
-        </div>
-
-
-
-<div style="display: flex; justify-content: flex-start; margin-top: 40px; margin-bottom: 40px;">
-  <a href="https://info.flagcounter.com/HQ0J"><img src="https://s11.flagcounter.com/count2/HQ0J/bg_FFFFFF/txt_000000/border_CCCCCC/columns_5/maxflags_12/viewers_0/labels_0/pageviews_0/flags_0/percent_0/" alt="Flag Counter" border="0"></a>
-</div>
-
       </div>
     </div>
   </div>
+</header>
+
+<section id="background">
+  <div class="wrap">
+    <div class="sec-head"><h2>Experience &amp; Education</h2><span class="rule"></span></div>
+    <div class="twocol reveal">
+      <div class="tl-block">
+        <h3>Experience</h3>
+        <div class="tl-item">
+          <div class="tl-logo">R</div>
+          <div class="tl-body"><div class="org">Roblox · Foundation AI</div><div class="det">AI Engineer</div><div class="yr">Present</div></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-logo">H</div>
+          <div class="tl-body"><div class="org">Hedra Labs</div><div class="det">Research Intern · CV / GenAI</div><div class="yr">2025</div></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-logo">T</div>
+          <div class="tl-body"><div class="org">Tencent Games</div><div class="det">Research Intern</div><div class="yr">2024 – 2025</div></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-logo">B</div>
+          <div class="tl-body"><div class="org">ByteDance AI Lab</div><div class="det">Research Intern</div><div class="yr">2023 – 2024</div></div>
+        </div>
+      </div>
+      <div class="tl-block">
+        <h3>Education</h3>
+        <div class="tl-item">
+          <div class="tl-logo">N</div>
+          <div class="tl-body"><div class="org">National University of Singapore</div><div class="det">Ph.D. in Computer Science</div><div class="yr">2025</div></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-logo">N</div>
+          <div class="tl-body"><div class="org">Nanyang Technological University</div><div class="det">M.Eng. · GPA 5.0 / 5.0</div><div class="yr">Graduated</div></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-logo">W</div>
+          <div class="tl-body"><div class="org">Wuhan University</div><div class="det">B.E.</div><div class="yr">Graduated</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="news">
+  <div class="wrap">
+    <div class="sec-head"><h2>News</h2><span class="rule"></span></div>
+    <div class="news reveal">
+      <div class="news-row"><span class="news-date">Apr 2026</span><span class="news-txt">One paper accepted to <strong>TIP 2026</strong>.</span></div>
+      <div class="news-row"><span class="news-date">Sep 2025</span><span class="news-txt">One paper accepted to <strong>NeurIPS 2025</strong>.</span></div>
+      <div class="news-row"><span class="news-date">May 2025</span><span class="news-txt">Selected as <strong>Outstanding Reviewer</strong> at CVPR 2025.</span></div>
+      <div class="news-row"><span class="news-date">Apr 2025</span><span class="news-txt"><strong>MAR-3D</strong> selected as <strong>Highlight</strong> at CVPR 2025 (top 3% of submissions).</span></div>
+      <div class="news-row"><span class="news-date">Feb 2025</span><span class="news-txt">Two papers accepted to <strong>CVPR 2025</strong>.</span></div>
+      <div class="news-row"><span class="news-date">Jan 2025</span><span class="news-txt">One paper accepted to <strong>ICLR 2025</strong>.</span></div>
+      <div class="news-row"><span class="news-date">Dec 2024</span><span class="news-txt">One paper accepted to <strong>AAAI 2025</strong>.</span></div>
+      <div class="news-row"><span class="news-date">Oct 2024</span><span class="news-txt">One paper accepted to <strong>WACV 2025</strong>.</span></div>
+      <div class="news-row"><span class="news-date">Jun 2023</span><span class="news-txt">One paper accepted to <strong>ICCV 2023</strong>.</span></div>
+      <div class="news-row"><span class="news-date">Feb 2021</span><span class="news-txt">One paper accepted to <strong>CVPR 2021</strong>.</span></div>
+      <div class="news-row"><span class="news-date">Feb 2020</span><span class="news-txt">One paper accepted to <strong>CVPR 2020</strong>.</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="publications">
+  <div class="wrap">
+    <div class="sec-head"><h2>Selected Publications</h2><span class="rule"></span></div>
+
+    <div class="pub-cat">3D Generation &amp; Texturing</div>
+
+    <div class="pub reveal">
+      <div class="pub-media"><img src="images/Teaser_Muma.png" alt="MuMA" onerror="this.parentNode.innerHTML='<span class=ph>MuMA</span>'"></div>
+      <div>
+        <div class="pub-title">MuMA: 3D PBR Texturing via Multi-Channel Multi-View Generation and Agentic Post-Processing</div>
+        <div class="pub-authors">Lingting Zhu, Jingrui Ye, Runze Zhang, Zeyu Hu, Yingda Yin, Lanjiong Li, <span class="me">Jinnan Chen</span>, Shengju Qian, Xin Wang, Qingmin Liao, Lequan Yu</div>
+        <div class="pub-venue">IEEE Transactions on Image Processing<span class="badge">TIP 2026</span></div>
+        <div class="pub-links"><a href="https://arxiv.org/abs/2503.18461">arXiv</a></div>
+      </div>
+    </div>
+
+    <div class="pub reveal">
+      <div class="pub-media"><img src="images/ultrashape.png" alt="UltraShape" onerror="this.parentNode.innerHTML='<span class=ph>UltraShape 1.0</span>'"></div>
+      <div>
+        <div class="pub-title">UltraShape 1.0: High-Fidelity 3D Shape Generation via Scalable Geometric Refinement</div>
+        <div class="pub-authors">Tanghui Jia, Dongyu Yan, Dehao Hao, Yang Li, Kaiyi Zhang, Xianyi He, Lanjiong Li, <span class="me">Jinnan Chen</span>, Lutao Jiang, Qishen Yin, Long Quan, Ying-Cong Chen, Li Yuan</div>
+        <div class="pub-venue">Technical Report<span class="badge">arXiv 2025</span></div>
+        <div class="pub-links"><a href="https://arxiv.org/abs/2512.21185">arXiv</a><a href="https://pku-yuangroup.github.io/UltraShape-1.0/">Page</a></div>
+      </div>
+    </div>
+
+    <div class="pub reveal">
+      <div class="pub-media"><video src="videos/mar-3d.mov" autoplay muted loop playsinline onerror="this.parentNode.innerHTML='<span class=ph>MAR-3D</span>'"></video></div>
+      <div>
+        <div class="pub-title">MAR-3D: Progressive Masked Auto-regressor for High-Resolution 3D Generation</div>
+        <div class="pub-authors"><span class="me">Jinnan Chen</span>, Lingting Zhu, Zeyu Hu, Shengju Qian, Yugang Chen, Xin Wang, Gim Hee Lee</div>
+        <div class="pub-venue">IEEE/CVF Conference on Computer Vision and Pattern Recognition<span class="badge">CVPR 2025</span> <span class="hl">Highlight</span></div>
+        <div class="pub-links"><a href="https://arxiv.org/abs/2503.20519">arXiv</a><a href="https://jinnan-chen.github.io/projects/MAR-3D/">Page</a><a href="https://github.com/jinnan-chen/MAR-3D">Code</a></div>
+      </div>
+    </div>
+
+    <div class="pub-cat">Human Reconstruction &amp; Animation</div>
+
+    <div class="pub reveal">
+      <div class="pub-media"><img src="images/human-motion.gif" alt="Auto-Connect" onerror="this.parentNode.innerHTML='<span class=ph>Auto-Connect</span>'"></div>
+      <div>
+        <div class="pub-title">Auto-Connect: Connectivity-Preserving RigFormer with Direct Preference Optimization</div>
+        <div class="pub-authors">Jingfeng Guo*, Jian Liu*, <span class="me">Jinnan Chen</span>†, Shiwei Mao, Changrong Hu, Puhua Jiang, Junlin Yu, Jing Xu, Qi Liu†, Lixin Xu, Zhuo Chen, Chunchao Guo <em>(† corresponding author)</em></div>
+        <div class="pub-venue">Conference on Neural Information Processing Systems<span class="badge">NeurIPS 2025</span></div>
+        <div class="pub-links"><a href="https://arxiv.org/abs/2506.11430">arXiv</a><a href="https://autoconnectrig.github.io/">Page</a></div>
+      </div>
+    </div>
+
+    <div class="pub reveal">
+      <div class="pub-media"><video src="videos/close.mp4" autoplay muted loop playsinline onerror="this.parentNode.innerHTML='<span class=ph>CloseApp</span>'"></video></div>
+      <div>
+        <div class="pub-title">Reconstructing Close Human Interaction with Appearance and Proxemics Reasoning</div>
+        <div class="pub-authors">Buzhen Huang, Chen Li, Chongyang Xu, Dongyue Lu, <span class="me">Jinnan Chen</span>, Yangang Wang, Gim Hee Lee</div>
+        <div class="pub-venue">IEEE/CVF Conference on Computer Vision and Pattern Recognition<span class="badge">CVPR 2025</span></div>
+        <div class="pub-links"><a href="https://arxiv.org/abs/2507.02565">arXiv</a><a href="https://www.buzhenhuang.com/works/CloseApp.html">Page</a><a href="https://github.com/boycehbz/CloseApp">Code</a></div>
+      </div>
+    </div>
+
+    <div class="pub reveal">
+      <div class="pub-media"><video src="videos/hgm.mov" autoplay muted loop playsinline onerror="this.parentNode.innerHTML='<span class=ph>HGM</span>'"></video></div>
+      <div>
+        <div class="pub-title">Generalizable Human Gaussians from Single-View Image</div>
+        <div class="pub-authors"><span class="me">Jinnan Chen</span>, Chen Li, Jianfeng Zhang, Lingting Zhu, Buzhen Huang, Hanlin Chen, Gim Hee Lee</div>
+        <div class="pub-venue">International Conference on Learning Representations<span class="badge">ICLR 2025</span></div>
+        <div class="pub-links"><a href="https://arxiv.org/abs/2406.06050">arXiv</a><a href="https://jinnan-chen.github.io/projects/HGM/">Page</a><a href="https://github.com/jinnan-chen/HGM">Code</a></div>
+      </div>
+    </div>
+
+    <div class="pub reveal">
+      <div class="pub-media"><video src="videos/dihur.mov" autoplay muted loop playsinline onerror="this.parentNode.innerHTML='<span class=ph>DiHuR</span>'"></video></div>
+      <div>
+        <div class="pub-title">DiHuR: Diffusion-Guided Generalizable Human Reconstruction</div>
+        <div class="pub-authors"><span class="me">Jinnan Chen</span>, Chen Li, Gim Hee Lee</div>
+        <div class="pub-venue">IEEE/CVF Winter Conference on Applications of Computer Vision<span class="badge">WACV 2025</span></div>
+        <div class="pub-links"><a href="https://arxiv.org/abs/2411.11903">arXiv</a></div>
+      </div>
+    </div>
+
+    <div class="pub reveal">
+      <div class="pub-media"><img src="images/ws3dpt.png" alt="WS3DPT" onerror="this.parentNode.innerHTML='<span class=ph>WS-3DPT</span>'"></div>
+      <div>
+        <div class="pub-title">Weakly-supervised 3D Pose Transfer with Keypoints</div>
+        <div class="pub-authors"><span class="me">Jinnan Chen</span>, Chen Li, Gim Hee Lee</div>
+        <div class="pub-venue">IEEE/CVF International Conference on Computer Vision<span class="badge">ICCV 2023</span></div>
+        <div class="pub-links"><a href="https://arxiv.org/abs/2307.13459">arXiv</a><a href="https://jinnan-chen.github.io/ws3dpt/">Page</a><a href="https://github.com/jinnan-chen/3D-Pose-Transfer">Code</a></div>
+      </div>
+    </div>
+
+    <div class="pub-cat">4D &amp; Scene Representation</div>
+
+    <div class="pub reveal">
+      <div class="pub-media"><img src="images/Teaser_Forge4D.png" alt="Forge4D" onerror="this.parentNode.innerHTML='<span class=ph>Forge4D</span>'"></div>
+      <div>
+        <div class="pub-title">Forge4D: Feed-Forward 4D Human Reconstruction and Interpolation from Uncalibrated Sparse Videos</div>
+        <div class="pub-authors">Yingdong Hu*, Yisheng He*†, <span class="me">Jinnan Chen</span>, Weihao Yuan, Kejie Qiu, Zehong Lin, Siyu Zhu, Zilong Dong, Jun Zhang</div>
+        <div class="pub-venue">Technical Report<span class="badge">arXiv 2025</span></div>
+        <div class="pub-links"><a href="https://arxiv.org/abs/2509.24209">arXiv</a><a href="https://zhenliuzju.github.io/huyingdong/Forge4D/">Page</a></div>
+      </div>
+    </div>
+
+    <div class="pub reveal">
+      <div class="pub-media"><img src="images/teaser-lig.png" alt="LIG" onerror="this.parentNode.innerHTML='<span class=ph>LIG</span>'"></div>
+      <div>
+        <div class="pub-title">Large Images are Gaussians: High-quality Large Image Representation with Levels of 2D Gaussian Splatting</div>
+        <div class="pub-authors">Lingting Zhu, Guying Lin, <span class="me">Jinnan Chen</span>, Xinjie Zhang, Zhenchao Jin, Zhao Wang, Lequan Yu</div>
+        <div class="pub-venue">AAAI Conference on Artificial Intelligence<span class="badge">AAAI 2025</span></div>
+        <div class="pub-links"><a href="https://arxiv.org/abs/2502.09039">arXiv</a><a href="https://github.com/HKU-MedAI/LIG">Code</a></div>
+      </div>
+    </div>
+
+    <div class="pub-cat">Early Work · Imaging &amp; Calibration</div>
+
+    <div class="pub reveal">
+      <div class="pub-media"><img src="images/teaser_absorption.png" alt="Reflection Removal" onerror="this.parentNode.innerHTML='<span class=ph>Reflection Removal</span>'"></div>
+      <div>
+        <div class="pub-title">Single Image Reflection Removal with Absorption Effect</div>
+        <div class="pub-authors">Qian Zheng, Boxin Shi, <span class="me">Jinnan Chen</span>, Xudong Jiang, Ling-Yu Duan, Alex C. Kot</div>
+        <div class="pub-venue">IEEE/CVF Conference on Computer Vision and Pattern Recognition<span class="badge">CVPR 2021</span></div>
+        <div class="pub-links"><a href="https://openaccess.thecvf.com/content/CVPR2021/html/Zheng_Single_Image_Reflection_Removal_With_Absorption_Effect_CVPR_2021_paper.html">Paper</a><a href="https://github.com/q-zh/absorption">Code</a></div>
+      </div>
+    </div>
+
+    <div class="pub reveal">
+      <div class="pub-media"><img src="images/teaser_distillation.png" alt="Feature Distillation" onerror="this.parentNode.innerHTML='<span class=ph>Feature Distillation</span>'"></div>
+      <div>
+        <div class="pub-title">Feature Distillation with Guided Adversarial Contrastive Learning</div>
+        <div class="pub-authors">Tao Bai, <span class="me">Jinnan Chen</span>, Jun Zhao, Bihan Wen, Xudong Jiang, Alex Kot</div>
+        <div class="pub-venue">Technical Report<span class="badge">arXiv 2020</span></div>
+        <div class="pub-links"><a href="https://arxiv.org/abs/2009.09922">arXiv</a></div>
+      </div>
+    </div>
+
+    <div class="pub reveal">
+      <div class="pub-media"><img src="images/teaser_glass.png" alt="Plate Glass Calibration" onerror="this.parentNode.innerHTML='<span class=ph>Plate Glass</span>'"></div>
+      <div>
+        <div class="pub-title">What Does Plate Glass Reveal About Camera Calibration?</div>
+        <div class="pub-authors">Qian Zheng, <span class="me">Jinnan Chen</span>, Zhan Lu, Boxin Shi, Xudong Jiang, Kim-Hui Yap, Ling-Yu Duan, Alex C. Kot</div>
+        <div class="pub-venue">IEEE/CVF Conference on Computer Vision and Pattern Recognition<span class="badge">CVPR 2020</span></div>
+        <div class="pub-links"><a href="https://openaccess.thecvf.com/content_CVPR_2020/html/Zheng_What_Does_Plate_Glass_Reveal_About_Camera_Calibration_CVPR_2020_paper.html">Paper</a><a href="https://github.com/q-zh/GlassCalibration">Code</a></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="more">
+  <div class="wrap">
+    <div class="sec-head"><h2>Teaching &amp; Service</h2><span class="rule"></span></div>
+    <div class="twocol reveal">
+      <div class="tl-block">
+        <h3>Teaching Assistant · NUS</h3>
+        <ul class="plainlist">
+          <li><span class="yr">2022</span>CS5340 — Uncertainty Modelling in AI</li>
+          <li><span class="yr">2022</span>CS5477 — 3D Computer Vision</li>
+        </ul>
+      </div>
+      <div class="tl-block">
+        <h3>Reviewer</h3>
+        <ul class="plainlist">
+          <li>CVPR 2024 – 2026 · ICCV 2025 · ECCV 2026</li>
+          <li>NeurIPS 2024 – 2025 · ICLR 2025 – 2026</li>
+          <li>ICML 2025 – 2026 · AISTATS 2025 – 2026</li>
+          <li>AAAI 2026 · TMLR</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>© 2026 Jinnan (Kenny) Chen · <span class="mono">jinnancv@gmail.com</span></p>
+    <p style="margin-top:6px">Last updated May 2026</p>
+  </div>
+</footer>
+
+<script>
+  const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.08});
+  document.querySelectorAll('.reveal').forEach((el,i)=>{el.style.transitionDelay=(Math.min(i,6)*40)+'ms';io.observe(el)});
+</script>
 </body>
 </html>
